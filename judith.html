@@ -3,24 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrante 1</title>
+    <title>Perfil | Judith Grau — DevTeam TP1</title>
+
+    <!-- Google Fonts del equipo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS compartido del equipo -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Integrante 1</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="integrante1.html">Integrante 1</a></li>
-            <li><a href="integrante2.html">Integrante 2</a></li>
-            <li><a href="integrante3.html">Integrante 3</a></li>
-            <li><a href="integrante4.html">Integrante 4</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-        </ul>
+<body id="top">
+
+    <!-- Navbar Compartida -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="nav-back">← Volver al inicio</a>
+            <div class="nav-links">
+                <a href="index.html">INICIO</a>
+                <a href="judith.html" class="active">JUDITH</a>
+                <a href="matias.html">MATÍAS</a>
+                <a href="lucas.html">LUCAS</a>
+                <a href="mauro.html">MAURO</a>
+                <a href="bitacora.html">BITÁCORA</a>
+            </div>
+        </div>
     </nav>
-    <main>
-        <p>Información del integrante 1</p>
+
+    <main class="container" style="padding-top: 40px;">
+
+        <!-- 1. Tarjeta Principal de Presentación (Double-Bezel) -->
+        <section style="padding: 20px 0 40px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner" style="display: flex; flex-wrap: wrap; gap: 36px; align-items: center;">
+                    <div class="member-avatar-slot" style="max-width: 200px; margin: 0 auto;">
+                        <img src="img/judith.png" alt="Foto de Judith Grau" class="member-avatar-img" onerror="this.src='img/ju_pcV2.png';">
+                    </div>
+
+                    <div style="flex: 1; min-width: 280px;">
+                        <span class="eyebrow">Coordinación & Portada</span>
+                        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 8px;">Judith Grau</h1>
+                        <p style="color: var(--color-blue); font-weight: 600; margin-bottom: 16px;">Full Stack Developer & Diseño UX</p>
+                        
+                        <!-- Datos obligatorios por consigna: Ciudad y Edad -->
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px;">
+                            <p><strong><i class="fa-solid fa-location-dot text-accent"></i> Ciudad:</strong> Buenos Aires, Argentina</p>
+                            <p><strong><i class="fa-solid fa-cake-candles text-accent"></i> Cumpleaños:</strong> 29 de noviembre (<span id="judith-edad">calculando edad...</span>)</p>
+                        </div>
+
+                        <p style="margin-bottom: 24px;">
+                            Desarrollo soluciones web funcionales e intuitivas combinando desarrollo Frontend, Backend y experiencia de usuario. En este TP1 asumí el rol de coordinación general, arquitectura del repositorio y desarrollo de la portada grupal.
+                        </p>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://github.com/JudithGrau" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i> GitHub ↗
+                            </a>
+                            <a href="https://www.linkedin.com/in/judithgrau" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Requisitos de Consigna: Habilidades, Películas y Discos -->
+        <section style="padding: 20px 0;">
+            <div class="team-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                
+                <!-- 4 Habilidades Obligatorias -->
+                <article class="double-bezel">
+                    <div class="double-bezel-inner" style="height: 100%;">
+                        <span class="eyebrow"><i class="fa-solid fa-code"></i> Skills</span>
+                        <h3 style="margin-bottom: 16px;">Habilidades</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                            <li><strong class="text-blue">1. React & TypeScript:</strong> Desarrollo de interfaces escalables y tipado robusto.</li>
+                            <li><strong class="text-blue">2. HTML5 Semántico & CSS Modular:</strong> Maquetación accesible y responsive design.</li>
+                            <li><strong class="text-blue">3. Java & Spring Boot:</strong> Creación y consumo de servicios y APIs REST seguras.</li>
+                            <li><strong class="text-blue">4. UX/UI & Prototipado:</strong> Diseño en Figma centrado en las necesidades del usuario.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 3 Películas Favoritas Obligatorias -->
+                <article class="double-bezel">
+                    <div class="double-bezel-inner" style="height: 100%;">
+                        <span class="eyebrow"><i class="fa-solid fa-film"></i> Cine</span>
+                        <h3 style="margin-bottom: 16px;">Películas Favoritas</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                            <li><strong class="text-accent">1. Interstellar:</strong> Una obra maestra visual sobre ciencia, tiempo y perseverancia.</li>
+                            <li><strong class="text-accent">2. The Social Network:</strong> El retrato fundacional del desarrollo de producto y código.</li>
+                            <li><strong class="text-accent">3. Inception:</strong> Arquitectura mental llevada a una narrativa estructurada e impecable.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 3 Discos Favoritos Obligatorios -->
+                <article class="double-bezel">
+                    <div class="double-bezel-inner" style="height: 100%;">
+                        <span class="eyebrow"><i class="fa-solid fa-compact-disc"></i> Música</span>
+                        <h3 style="margin-bottom: 16px;">Discos Favoritos</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                            <li><strong class="text-blue">1. Random Access Memories</strong> — Daft Punk</li>
+                            <li><strong class="text-blue">2. Currents</strong> — Tame Impala</li>
+                            <li><strong class="text-blue">3. Abbey Road</strong> — The Beatles</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 3. Interacción Dinámica con JavaScript (Requisito Propio del Perfil) -->
+        <section style="padding: 30px 0 60px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner" style="text-align: center;">
+                    <span class="eyebrow">Interacción Dinámica</span>
+                    <h3>¿Querés una recomendación de Judith para programar?</h3>
+                    <p style="margin-bottom: 20px;">Hacé clic para generar al azar una combinación de mi disco o película sugerida para una sesión de código.</p>
+                    
+                    <button id="btn-judith-quote" class="btn btn-primary" type="button">
+                        Generar recomendación ✦
+                    </button>
+
+                    <div id="judith-quote-display" style="margin-top: 20px; font-weight: 500; min-height: 28px; color: var(--color-coral);" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- Footer Compartido con botón de volver arriba -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#top" class="btn-top">Volver arriba ↑</a>
+            <p class="footer-credits">
+                Trabajo Práctico 1 — Desarrollo de Sistemas Web Frontend · 2026
+            </p>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
