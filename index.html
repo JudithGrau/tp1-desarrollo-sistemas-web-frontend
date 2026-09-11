@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1 - Desarrollo de Sistemas Web - Frontend</title>
+    <title>DevTeam | Desarrollo de Sistemas Web - Frontend</title>
 
-    <!-- Google Fonts preconnect & stylesheet links -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Estilos principales CSS -->
+    <!-- Estilos CSS compartidos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
 
-    <!-- Navegacion Sticky Glass -->
+    <!-- Navegación Sticky Glass -->
     <nav class="navbar">
         <div class="container navbar-content">
-            <div class="nav-brand">
-                Equipo TP1
-            </div>
+            <a href="index.html" class="nav-brand">DevTeam <span class="text-accent">TP1</span></a>
             <div class="nav-links">
                 <a href="index.html" class="active">INICIO</a>
                 <a href="judith.html">JUDITH</a>
-                <a href="matias.html">MATiAS</a>
+                <a href="matias.html">MATÍAS</a>
                 <a href="lucas.html">LUCAS</a>
                 <a href="mauro.html">MAURO</a>
-                <a href="bitacora.html">BITaCORA</a>
+                <a href="bitacora.html">BITÁCORA</a>
             </div>
         </div>
     </nav>
@@ -37,14 +35,32 @@
 
         <!-- Hero de Portada -->
         <section class="hero-section">
-            <span class="eyebrow">Trabajo Practico Grupal nº 1</span>
+            <span class="eyebrow">Trabajo Práctico Grupal Nº 1</span>
             <h1 class="hero-title">Desarrollo de Sistemas Web <span class="text-accent">Frontend</span></h1>
             <p class="hero-description">
-                Sitio web de presentacion del equipo, perfiles individuales, bitacora de desarrollo y sistema visual compartido.
+                Creamos experiencias web modulares, accesibles y adaptables. Nuestro propósito como equipo es consolidar una arquitectura sólida en HTML semántico, diseño consistente con CSS y dinamismo interactivo con JavaScript vanilla.
             </p>
             <div class="hero-actions">
-                <a href="#equipo" class="btn btn-primary">Conoce al equipo ↓</a>
-                <a href="bitacora.html" class="btn btn-secondary">Ver Bitacora</a>
+                <a href="#equipo" class="btn btn-primary">Conocé al equipo ↓</a>
+                <a href="bitacora.html" class="btn btn-secondary">Ver Bitácora</a>
+            </div>
+        </section>
+
+        <!-- Interacción JS de Portada -->
+        <section class="spotlight-interactive-section">
+            <div class="double-bezel">
+                <div class="double-bezel-inner" style="text-align: center;">
+                    <span class="eyebrow">Dinámica Grupal</span>
+                    <h3>¿A quién descubrimos hoy?</h3>
+                    <p style="margin-bottom: 24px;">Activá la selección aleatoria para conocer al instante el rol y enfoque de cada integrante.</p>
+                    
+                    <button id="btn-random-member" class="btn btn-primary" type="button">
+                        Seleccionar integrante al azar ✦
+                    </button>
+
+                    <!-- Salida del script JS -->
+                    <div id="random-member-display" style="margin-top: 24px;" aria-live="polite"></div>
+                </div>
             </div>
         </section>
 
@@ -57,47 +73,42 @@
 
             <div class="team-grid">
 
-                <!-- Tarjeta Integrante 1: Judith -->
+                <!-- Integrante 1: Judith -->
                 <article class="double-bezel">
                     <div class="double-bezel-inner member-card-content">
                         <div class="member-avatar-slot">
-                            <!-- Si existe la imagen en img/judith.png o img/integrante1.png descomentar la etiqueta img -->
-                            <!-- <img src="img/judith.png" alt="Fotografia de Judith" class="member-avatar-img"> -->
-                            <div class="member-avatar-icon">👤</div>
-                            <span class="member-avatar-label">Judith</span>
+                            <img src="img/judith.png" alt="Avatar de Judith" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         </div>
                         <div>
                             <h3 class="member-name">Judith</h3>
-                            <p class="member-role">Coordinacion & Portada</p>
+                            <p class="member-role">Coordinación & Portada</p>
                         </div>
                         <a href="judith.html" class="btn btn-secondary btn-full">Ver perfil</a>
                     </div>
                 </article>
 
-                <!-- Tarjeta Integrante 2: Matias -->
+                <!-- Integrante 2: Matías -->
                 <article class="double-bezel">
                     <div class="double-bezel-inner member-card-content">
                         <div class="member-avatar-slot">
-                            <!-- Si existe la imagen en img/matias.png o img/integrante2.png descomentar la etiqueta img -->
-                            <!-- <img src="img/matias.png" alt="Fotografia de Matias" class="member-avatar-img"> -->
-                            <div class="member-avatar-icon">🎵</div>
-                            <span class="member-avatar-label">Matias</span>
+                            <img src="img/integrante2.png" alt="Avatar de Matías" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="member-avatar-icon" style="display: none;">🎵</div>
+                            <span class="member-avatar-label">Matías</span>
                         </div>
                         <div>
-                            <h3 class="member-name">Matias</h3>
+                            <h3 class="member-name">Matías</h3>
                             <p class="member-role">Sistema Visual & Perfil</p>
                         </div>
                         <a href="matias.html" class="btn btn-secondary btn-full">Ver perfil</a>
                     </div>
                 </article>
 
-                <!-- Tarjeta Integrante 3: Lucas -->
+                <!-- Integrante 3: Lucas -->
                 <article class="double-bezel">
                     <div class="double-bezel-inner member-card-content">
                         <div class="member-avatar-slot">
-                            <!-- Si existe la imagen en img/lucas.png o img/integrante3.png descomentar la etiqueta img -->
-                            <!-- <img src="img/lucas.png" alt="Fotografia de Lucas" class="member-avatar-img"> -->
-                            <div class="member-avatar-icon">💻</div>
+                            <img src="img/integrante3.png" alt="Avatar de Lucas" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="member-avatar-icon" style="display: none;">💻</div>
                             <span class="member-avatar-label">Lucas</span>
                         </div>
                         <div>
@@ -108,18 +119,17 @@
                     </div>
                 </article>
 
-                <!-- Tarjeta Integrante 4: Mauro -->
+                <!-- Integrante 4: Mauro -->
                 <article class="double-bezel">
                     <div class="double-bezel-inner member-card-content">
                         <div class="member-avatar-slot">
-                            <!-- Si existe la imagen en img/mauro.png o img/integrante4.png descomentar la etiqueta img -->
-                            <!-- <img src="img/mauro.png" alt="Fotografia de Mauro" class="member-avatar-img"> -->
-                            <div class="member-avatar-icon">📝</div>
+                            <img src="img/integrante4.png" alt="Avatar de Mauro" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="member-avatar-icon" style="display: none;">📝</div>
                             <span class="member-avatar-label">Mauro</span>
                         </div>
                         <div>
                             <h3 class="member-name">Mauro</h3>
-                            <p class="member-role">Bitacora & Documentacion</p>
+                            <p class="member-role">Bitácora & Documentación</p>
                         </div>
                         <a href="mauro.html" class="btn btn-secondary btn-full">Ver perfil</a>
                     </div>
@@ -130,11 +140,12 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Compartido -->
     <footer>
         <div class="container footer-content">
+            <a href="#top" class="btn-top">Volver arriba ↑</a>
             <p class="footer-credits">
-                Trabajo Practico 1 — Desarrollo de Sistemas Web Frontend · 2026
+                Trabajo Práctico 1 — Desarrollo de Sistemas Web Frontend · 2026
             </p>
         </div>
     </footer>
