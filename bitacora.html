@@ -3,25 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora</title>
+    <title>Bitácora — DevTeam TP1</title>
+
+    <!-- Google Fonts del equipo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS compartido del equipo -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Bitácora del Proyecto</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="integrante1.html">Integrante 1</a></li>
-            <li><a href="integrante2.html">Integrante 2</a></li>
-            <li><a href="integrante3.html">Integrante 3</a></li>
-            <li><a href="integrante4.html">Integrante 4</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-        </ul>
+<body id="top">
+
+    <!-- Navbar Compartida -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="nav-back">← Volver al inicio</a>
+            <div class="nav-links">
+                <a href="index.html">INICIO</a>
+                <a href="judith.html">JUDITH</a>
+                <a href="matias.html">MATÍAS</a>
+                <a href="lucas.html">LUCAS</a>
+                <a href="mauro.html">MAURO</a>
+                <a href="bitacora.html" class="active">BITÁCORA</a>
+            </div>
+        </div>
     </nav>
-    <main>
-        <h2>Registro de actividades</h2>
-        <p>Aquí se registran las actividades del proyecto</p>
+
+    <main class="container" style="padding-top: 40px;">
+
+        <section class="hero-section" style="padding-bottom: 20px;">
+            <span class="eyebrow">Proceso del equipo</span>
+            <h1 class="hero-title">Bitácora <span class="text-accent">del proyecto</span></h1>
+            <p class="hero-description">
+                Registro de las decisiones, dificultades y cambios del equipo a lo largo del TP1.
+            </p>
+        </section>
+
+        <!-- Entrada 1 -->
+        <section style="padding: 20px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Entrada 1</span>
+                    <h3 style="margin-bottom: 12px;">Organización inicial</h3>
+                    <p><strong class="text-blue">Decisión:</strong> Decisión: definimos los roles del equipo y la estructura del proyecto. Judith coordina y desarrolla la portada, Matías define el sistema visual, Lucas trabaja el responsive, y Mauro se encarga de la bitácora y el README. Además de su rol específico, cada integrante desarrolla su propio perfil individual.</p>
+                    <p style="margin-top: 10px;"><strong class="text-blue">Acordamos:</strong> trabajar sobre un repositorio compartido en GitHub, usar una identidad visual común para todas las páginas y hacer commits progresivos para que quede evidencia del trabajo de cada uno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entrada 2 -->
+        <section style="padding: 20px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-palette"></i> Entrada 2</span>
+                    <h3 style="margin-bottom: 12px;">Identidad visual</h3>
+                    <p><strong class="text-blue">Decisión:</strong> elegimos las tipografías Inter y Sora de Google Fonts y un estilo de tarjetas "double-bezel" para todas las secciones (portada y perfiles).</p>
+                    <p style="margin-top: 10px;"><strong class="text-blue">Motivo:</strong> buscamos una estética moderna y consistente, con una navegación tipo "navbar" fija en todas las páginas para que nadie tenga que depender del botón Atrás del navegador.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entrada 3 -->
+        <section style="padding: 20px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-triangle-exclamation"></i> Entrada 3</span>
+                    <h3 style="margin-bottom: 12px;">Dificultad con el entorno de trabajo</h3>
+                    <p><strong class="text-blue">Problema:</strong> al clonar el repositorio grupal con GitHub Desktop, apareció el error "Unable to merge unrelated histories" porque se estaba intentando traer el repo del TP1 sobre la carpeta de otro proyecto ya existente.</p>
+                    <p style="margin-top: 10px;"><strong class="text-blue">Solución:</strong> se clonó el repositorio correcto (<code>tp1-desarrollo-sistemas-web-frontend</code>) en una carpeta local nueva y vacía, evitando así mezclar historiales de Git de proyectos distintos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entrada 4 -->
+        <section style="padding: 20px 0 60px 0;">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-code-branch"></i> Entrada 4</span>
+                    <h3 style="margin-bottom: 12px;">Avance de perfiles individuales</h3>
+                    <p><strong class="text-blue">Cambios:</strong> cada integrante desarrolló su propia página de perfil siguiendo el mismo sistema de diseño de la portada (navbar, tarjetas "double-bezel", datos obligatorios de ciudad, edad, habilidades, películas y discos, más una interacción propia en JavaScript).</p>
+                    <p style="margin-top: 10px;"><strong class="text-blue">Próximos pasos:</strong> terminar de revisar el diseño responsive en 400px, 900px y 1200px, y completar el README con la documentación final del proyecto y el uso de IA.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- Footer Compartido -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#top" class="btn-top">Volver arriba ↑</a>
+            <p class="footer-credits">
+                Trabajo Práctico 1 — Desarrollo de Sistemas Web Frontend · 2026
+            </p>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
