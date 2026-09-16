@@ -77,4 +77,30 @@ document.addEventListener('DOMContentLoaded', () => {
             displayJudith.textContent = recomendaciones[randomIndex];
         });
     }
+    // -----------------------------------------------------------------
+    // Perfil Matias: Carrusel (Desplazamiento horizontal con botones)
+    // -----------------------------------------------------------------
+    const carousels = document.querySelectorAll('.scroll-gallery-wrapper');
+
+    carousels.forEach(wrapper => {
+        const gallery = wrapper.querySelector('.scroll-gallery');
+        const prevBtn = wrapper.querySelector('.prev-btn');
+        const nextBtn = wrapper.querySelector('.next-btn');
+        
+        if (!gallery || !prevBtn || !nextBtn) return;
+
+        // Lógica de movimiento: avanza/retrocede pero respetando los límites naturales
+        const scrollNext = () => {
+            // Avanza el ancho del contenedor visible (multiplicado por 0.9 para dejar ver un pedacito de la tarjeta anterior)
+            gallery.scrollBy({ left: gallery.clientWidth * 0.9, behavior: 'smooth' });
+        };
+
+        const scrollPrev = () => {
+            // Retrocede el ancho del contenedor visible
+            gallery.scrollBy({ left: -gallery.clientWidth * 0.9, behavior: 'smooth' });
+        };
+
+        nextBtn.addEventListener('click', scrollNext);
+        prevBtn.addEventListener('click', scrollPrev);
+    });
 });

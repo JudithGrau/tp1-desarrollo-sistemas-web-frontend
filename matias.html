@@ -3,24 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrante 2</title>
+    <title>Perfil — Matías | TP1 Frontend</title>
+
+    <!-- Google Fonts preconnect & stylesheet links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Estilos CSS: Base compartida + Estilos específicos del perfil -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>Integrante 2</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="integrante1.html">Integrante 1</a></li>
-            <li><a href="integrante2.html">Integrante 2</a></li>
-            <li><a href="integrante3.html">Integrante 3</a></li>
-            <li><a href="integrante4.html">Integrante 4</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-        </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="nav-back">← Volver al inicio</a>
+            <div class="nav-links">
+                <a href="judith.html">JUDITH</a>
+                <a href="lucas.html">LUCAS</a>
+                <a href="mauro.html">MAURO</a>
+                <a href="bitacora.html">BITÁCORA</a>
+            </div>
+        </div>
     </nav>
-    <main>
-        <p>Información del integrante 2</p>
+
+    <!-- Contenido Principal -->
+    <main class="container profile-main-content">
+        <!-- Tarjeta Principal de Presentación -->
+        <section class="profile-section-hero">
+            <div class="double-bezel">
+                <div class="double-bezel-inner profile-hero-layout">
+                    <div class="member-avatar-slot profile-avatar-wrapper">
+                        <img src="img/matias.png" alt="Avatar de Matias" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+
+                    <div class="profile-details">
+                        <span class="eyebrow"><i></i>Sistema Visual & Perfil</span>
+                        <h1 class="profile-name">Matías Jara</h1>
+                        <p class="profile-role">Front End Developer</p>
+
+                        <!-- Ciudad y Edad -->
+                        <div class="profile-meta-info">
+                            <p><strong><i class="fa-solid fa-location-dot text-accent"></i> Ciudad:</strong> San Salvador de Jujuy, Argentina</p>
+                            <p><strong><i class="fa-solid fa-cake-candles text-accent"></i> Edad:</strong> 29 años</p>
+                        </div>
+
+                        <p class="profile-bio-text">
+                            Apasionado por la música y los videojuegos. Estudié composición musical, diseño de sonido y desarrollo de audio para videojuegos, lo cual me llevó al mundo de la programación. En este TP1 me encargué de mi perfil personal así como de la identidad visual en CSS.
+                        </p>
+                        
+                        <!-- Enlaces -->
+                        <div class="profile-socials">
+                            <a href="https://github.com/matijara11" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i> GitHub ↗
+                            </a>
+                            <a href="https://www.linkedin.com/in/11-matias-jara/" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: habilidades -->
+        <section id="habilidades" class="profile-section">
+            <div class="double-bezel">
+                <div class="double-bezel-inner profile-hero-layout">
+                    <div class="profile-details">
+                        <span class="eyebrow"><i class="fa-solid fa-code"></i> Skills</span>
+                        <h3 class="mb-3">Habilidades</h3>
+                        <ul class="profile-list">
+                            <li><strong class="text-blue">1. Composición musical:</strong> Desarrollo de música para videojuegos y proyectos audiovisuales.</li>
+                            <li><strong class="text-blue">2. Diseño de sonido:</strong> Creación de experiencias auditivas envolventes.</li>
+                            <li><strong class="text-blue">3. Creatividad:</strong> Generación de ideas innovadoras y soluciones creativas.</li>
+                            <li><strong class="text-blue">4. Programación:</strong> Desarrollo de aplicaciones web interactivas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Películas favoritas -->
+        <section id="peliculas">
+            <div class="section-header">
+                <span class="eyebrow">Cinematografía</span>
+                <h2>Películas <span class="text-accent">favoritas</span></h2>
+            </div>
+
+            <!-- Scroll Gallery Wrapper-->
+            <div class="scroll-gallery-wrapper">
+                <button class="carousel-btn prev-btn" aria-label="Anterior">⟨</button>
+                <button class="carousel-btn next-btn" aria-label="Siguiente">⟩</button>
+                
+                <div class="scroll-gallery">
+
+                    <!-- Película 1 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-mati/pelicula-1.png" alt="El Señor de los Anillos: El Retorno del Rey" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Fantasía / Épico</span>
+                            <h3 class="media-overlay-title">El Señor de los Anillos: El Retorno del Rey</h3>
+                            <div class="media-overlay-meta">Año 2003</div>
+                            <p class="media-overlay-review">
+                                Una obra maestra de la escala cinematográfica y la composición musical.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 2 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-mati/pelicula-2.png" alt="28 días después" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Terror / Sci-Fi</span>
+                            <h3 class="media-overlay-title">28 días después</h3>
+                            <div class="media-overlay-meta">Año 2002</div>
+                            <p class="media-overlay-review">
+                                Innovadora dirección de fotografía y una atmósfera sonora impresionante.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 3 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-mati/pelicula-3.png" alt="Había una vez en Hollywood" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Drama / Comedia</span>
+                            <h3 class="media-overlay-title">Había una vez en Hollywood</h3>
+                            <div class="media-overlay-meta">Año 2019</div>
+                            <p class="media-overlay-review">
+                                Brillante reconstrucción de época y ritmo narrativo impecable.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 4 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-mati/pelicula-4.png" alt="Blade Runner" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Sci-Fi / Neo-Noir</span>
+                            <h3 class="media-overlay-title">Blade Runner</h3>
+                            <div class="media-overlay-meta">Año 1982</div>
+                            <p class="media-overlay-review">
+                                Referente absoluto en diseño conceptual, luz y música sintetizada.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 5 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-mati/pelicula-5.png" alt="Star Wars V: El Imperio Contraataca" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Sci-Fi / Aventura</span>
+                            <h3 class="media-overlay-title">Star Wars: Episodio V — El Imperio Contraataca</h3>
+                            <div class="media-overlay-meta">Año 1980</div>
+                            <p class="media-overlay-review">
+                                El desarrollo de personajes y la banda sonora más icónica de la saga.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Discos favoritos -->
+        <section id="discos">
+            <div class="section-header">
+                <span class="eyebrow">Colección Sonora</span>
+                <h2>Discos <span class="text-accent">favoritos</span></h2>
+            </div>
+
+            <div class="scroll-gallery-wrapper">
+                <button class="carousel-btn prev-btn" aria-label="Anterior">⟨</button>
+                <button class="carousel-btn next-btn" aria-label="Siguiente">⟩</button>
+
+                <div class="scroll-gallery">
+
+                    <!-- Disco 1 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-mati/disco-1.png" alt="Fragile - Yes" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Rock Progresivo</span>
+                            <h3 class="media-overlay-title">Fragile</h3>
+                            <div class="media-overlay-artist">Yes</div>
+                            <div class="media-overlay-meta">Año 1971</div>
+                            <p class="media-overlay-review">
+                                Complejidad instrumental y armonías únicas que definieron una época.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 2 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-mati/disco-2.png" alt="Un Baión para el Ojo Idiota" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Rock Nacional</span>
+                            <h3 class="media-overlay-title">Un Baión para el Ojo Idiota</h3>
+                            <div class="media-overlay-artist">Patricio Rey y sus Redonditos de Ricota</div>
+                            <div class="media-overlay-meta">Año 1988</div>
+                            <p class="media-overlay-review">
+                                Un hito del rock argentino con lirismo, fuerza y sonido crudo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 3 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-mati/disco-3.png" alt="Facelift - Alice in Chains" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Grunge / Alt Metal</span>
+                            <h3 class="media-overlay-title">Facelift</h3>
+                            <div class="media-overlay-artist">Alice in Chains</div>
+                            <div class="media-overlay-meta">Año 1990</div>
+                            <p class="media-overlay-review">
+                                Guitarras pesadas y armonías vocales melancólicas inolvidables.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 4 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-mati/disco-4.png" alt="Revolver - The Beatles" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Rock Psicodélico</span>
+                            <h3 class="media-overlay-title">Revolver</h3>
+                            <div class="media-overlay-artist">The Beatles</div>
+                            <div class="media-overlay-meta">Año 1966</div>
+                            <p class="media-overlay-review">
+                                La gran revolución de la experimentación en estudio de grabación.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 5 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-mati/disco-5.png" alt="Eye in the Sky" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Art Rock / Pop Rock</span>
+                            <h3 class="media-overlay-title">Eye in the Sky</h3>
+                            <div class="media-overlay-artist">The Alan Parsons Project</div>
+                            <div class="media-overlay-meta">Año 1982</div>
+                            <p class="media-overlay-review">
+                                Producción impecable y paisajes sonoros futuristas sensacionales.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- Footer Compartido con botón de volver arriba -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#top" class="btn-top">Volver arriba ↑</a>
+            <p class="footer-credits">
+                Trabajo Práctico 1 — Desarrollo de Sistemas Web Frontend · 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts de Interacción: General + Específico de Matías -->
     <script src="js/script.js"></script>
 </body>
 </html>
