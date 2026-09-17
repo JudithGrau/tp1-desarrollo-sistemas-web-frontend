@@ -22,21 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 rol: "Sistema Visual & Perfil",
                 descripcion: "Arquitectura CSS con tokens, paleta de colores y componentes double-bezel.",
                 link: "matias.html",
-                img: "img/integrante2.png"
+                img: "img/matias.png"
             },
             {
                 nombre: "Lucas",
                 rol: "Responsive & Testing",
                 descripcion: "Optimización adaptable en breakpoints obligatorios de 400px, 900px y 1200px.",
                 link: "lucas.html",
-                img: "img/integrante3.png"
+                img: "img/lucas.png"
             },
             {
                 nombre: "Mauro",
                 rol: "Bitácora & Documentación",
                 descripcion: "Registro continuo del proceso colaborativo y redacción técnica del README.",
                 link: "mauro.html",
-                img: "img/integrante4.png"
+                img: "img/mauro.png"
             }
         ];
 
@@ -78,29 +78,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     // -----------------------------------------------------------------
-    // Perfil Matias: Carrusel (Desplazamiento horizontal con botones)
+    // Carrusel Multimedia (Desplazamiento horizontal con controles en cabecera)
     // -----------------------------------------------------------------
-    const carousels = document.querySelectorAll('.scroll-gallery-wrapper');
+    const galleries = document.querySelectorAll('.scroll-gallery');
 
-    carousels.forEach(wrapper => {
-        const gallery = wrapper.querySelector('.scroll-gallery');
-        const prevBtn = wrapper.querySelector('.prev-btn');
-        const nextBtn = wrapper.querySelector('.next-btn');
+    galleries.forEach(gallery => {
+        // Busca los controles en la seccion contenedora (.profile-section / section) o en el wrapper
+        const parentSection = gallery.closest('section') || gallery.closest('.scroll-gallery-wrapper') || gallery.parentElement;
+        if (!parentSection) return;
+
+        const prevBtn = parentSection.querySelector('.prev-btn');
+        const nextBtn = parentSection.querySelector('.next-btn');
         
-        if (!gallery || !prevBtn || !nextBtn) return;
+        if (!prevBtn || !nextBtn) return;
 
-        // Lógica de movimiento: avanza/retrocede pero respetando los límites naturales
+        // Calculo exacto del desplazamiento por tarjeta para sincronizar con scroll-snap y evitar tarjetas cortadas
+        const getScrollStep = () => {
+            const card = gallery.querySelector('.media-card');
+            if (!card) return gallery.clientWidth * 0.8;
+            const style = window.getComputedStyle(gallery);
+            const gap = parseFloat(style.columnGap || style.gap) || 24;
+            const cardWidth = card.getBoundingClientRect().width;
+            const singleCardStep = cardWidth + gap;
+
+            // Determinar cuántas tarjetas caben en el ancho visible
+            const visibleCards = Math.floor((gallery.clientWidth + gap) / singleCardStep);
+
+            // En mobile y tablet avanzamos de a 1 tarjeta para maxima precision; en pantallas grandes avanzamos de a 2
+            const cardsToMove = visibleCards >= 3 ? 2 : 1;
+            return singleCardStep * cardsToMove;
+        };
+
         const scrollNext = () => {
-            // Avanza el ancho del contenedor visible (multiplicado por 0.9 para dejar ver un pedacito de la tarjeta anterior)
-            gallery.scrollBy({ left: gallery.clientWidth * 0.9, behavior: 'smooth' });
+            gallery.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
         };
 
         const scrollPrev = () => {
-            // Retrocede el ancho del contenedor visible
-            gallery.scrollBy({ left: -gallery.clientWidth * 0.9, behavior: 'smooth' });
+            gallery.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
         };
 
         nextBtn.addEventListener('click', scrollNext);
         prevBtn.addEventListener('click', scrollPrev);
     });
 });
+

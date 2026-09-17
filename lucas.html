@@ -3,24 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrante 3</title>
+    <title>Perfil | Lucas Luccaroni — DevTeam TP1</title>
+
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <!-- Google Fonts del equipo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS compartido del equipo -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Integrante 3</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="integrante1.html">Integrante 1</a></li>
-            <li><a href="integrante2.html">Integrante 2</a></li>
-            <li><a href="integrante3.html">Integrante 3</a></li>
-            <li><a href="integrante4.html">Integrante 4</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-        </ul>
+<body id="top">
+
+    <!-- Navbar Compartida -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="nav-back">← Volver al inicio</a>
+            <div class="nav-links">
+                <a href="index.html">INICIO</a>
+                <a href="judith.html">JUDITH</a>
+                <a href="matias.html">MATÍAS</a>
+                <a href="lucas.html" class="active">LUCAS</a>
+                <a href="mauro.html">MAURO</a>
+                <a href="bitacora.html">BITÁCORA</a>
+            </div>
+        </div>
     </nav>
-    <main>
-        <p>Información del integrante 3</p>
+
+    <main class="container profile-main-content">
+
+        <!-- 1. Tarjeta Principal de Presentación (Double-Bezel) -->
+        <section class="profile-section-hero">
+            <div class="double-bezel">
+                <div class="double-bezel-inner profile-hero-layout">
+                    <div class="member-avatar-slot profile-avatar-wrapper">
+                        <img src="img/lucas.png" alt="Avatar de Lucas Luccaroni" class="member-avatar-img">
+                    </div>
+
+                    <div class="profile-details">
+                        <span class="eyebrow"><i class="fa-solid fa-mobile-screen-button"></i> Responsive & Testing</span>
+                        <h1 class="profile-name">Lucas Luccaroni</h1>
+                        <p class="profile-role">Full Stack & AI-Driven Developer</p>
+
+                        <!-- Datos obligatorios de consigna: Ciudad y Edad -->
+                        <div class="profile-meta-info">
+                            <p><strong><i class="fa-solid fa-location-dot text-accent"></i> Ciudad:</strong> Buenos Aires, Argentina</p>
+                            <p><strong><i class="fa-solid fa-cake-candles text-accent"></i> Edad:</strong> 27 años</p>
+                        </div>
+
+                        <p class="profile-bio-text">
+                            Desarrollador Full Stack y AI-Driven Developer enfocado en arquitecturas web escalables, desarrollo agéntico e inteligencia artificial aplicada. En este TP1 asumí la responsabilidad de la optimización responsive integral, consistencia de maquetación y testing de interfaz del equipo.
+                        </p>
+
+                        <!-- Enlaces profesionales -->
+                        <div class="profile-socials">
+                            <a href="https://github.com/lucasluccaroni" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i> GitHub ↗
+                            </a>
+                            <a href="https://lucasluccaroni-portfolio.vercel.app/" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                                <i class="fa-solid fa-globe"></i> Portafolio ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Sección: 4 Habilidades Obligatorias (Tomadas del Portafolio) -->
+        <section id="habilidades" class="profile-section">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-code"></i> Skills</span>
+                    <h3 class="mb-3">Habilidades</h3>
+                    <ul class="profile-list">
+                        <li>
+                            <strong class="text-blue">1. Frontend & Maquetación Adaptativa:</strong>
+                            HTML5 semántico, CSS3 modular (Flexbox y Grid), JavaScript moderno y TypeScript, con especialización en diseño responsive y accesibilidad web.
+                        </li>
+                        <li>
+                            <strong class="text-blue">2. Backend & Arquitectura de Servicios:</strong>
+                            Desarrollo con Node.js, Express, C# y .NET, estructuración bajo patrón MVC y diseño de APIs REST robustas y seguras.
+                        </li>
+                        <li>
+                            <strong class="text-blue">3. Bases de Datos & Persistencia:</strong>
+                            Modelado, optimización y administración de bases de datos relacionales y NoSQL utilizando MySQL, Supabase, Firebase y MongoDB.
+                        </li>
+                        <li>
+                            <strong class="text-blue">4. IA Aplicada & Desarrollo Agéntico:</strong>
+                            Integración de modelos LLM (Ollama, Groq, OpenRouter), construcción de pipelines RAG con bases vectoriales y flujos de trabajo colaborativos Humano-IA.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sección: Películas favoritas con Carrusel Horizontal -->
+        <section id="peliculas" class="profile-section">
+            <div class="section-header section-header-with-controls">
+                <div>
+                    <span class="eyebrow">Cinematografía</span>
+                    <h2>Películas <span class="text-accent">favoritas</span></h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Película anterior" type="button">⟨</button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente película" type="button">⟩</button>
+                </div>
+            </div>
+
+            <div class="scroll-gallery-wrapper">
+                <div class="scroll-gallery">
+
+                    <!-- Película 1 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-matrix.png" alt="The Matrix" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Sci-Fi / Cyberpunk</span>
+                            <h3 class="media-overlay-title">The Matrix</h3>
+                            <div class="media-overlay-meta">Año 1999</div>
+                            <p class="media-overlay-review">
+                                Obra cumbre de la ciencia ficción cyberpunk que revolucionó los efectos visuales y la narrativa sobre realidades simuladas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 2 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-odisea.png" alt="The Odyssey (La Odisea)" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Épico / Mitología</span>
+                            <h3 class="media-overlay-title">The Odyssey</h3>
+                            <div class="media-overlay-meta">Año 2026</div>
+                            <p class="media-overlay-review">
+                                La ambiciosa adaptación del poema homérico dirigida por Christopher Nolan, filmada íntegramente en formato IMAX para retratar el épico viaje de Odiseo a Ítaca.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 3 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-tropic-thunder.png" alt="Tropic Thunder" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Comedia / Acción</span>
+                            <h3 class="media-overlay-title">Tropic Thunder</h3>
+                            <div class="media-overlay-meta">Año 2008</div>
+                            <p class="media-overlay-review">
+                                Una brillante sátira sobre la industria de Hollywood y los actores de método, con un ritmo cómico impecable e interpretaciones icónicas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 4 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-the-game.png" alt="The Game" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Thriller / Suspenso</span>
+                            <h3 class="media-overlay-title">The Game</h3>
+                            <div class="media-overlay-meta">Año 1997</div>
+                            <p class="media-overlay-review">
+                                Magistral thriller psicológico de David Fincher que sumerge al espectador en una intriga fascinante de paranoia, manipulación y control.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 5 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-hombre-llamas.png" alt="Hombre en Llamas (Man on Fire)" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Acción / Drama</span>
+                            <h3 class="media-overlay-title">Hombre en Llamas</h3>
+                            <div class="media-overlay-meta">Año 2004</div>
+                            <p class="media-overlay-review">
+                                Intensa dirección de Tony Scott y una conmovedora actuación de Denzel Washington sobre redención, lealtad y protección incondicional.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Película 6 -->
+                    <article class="media-card movie-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/pelicula-frankenstein.png" alt="Frankenstein — Guillermo del Toro" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Fantasía / Terror Gótico</span>
+                            <h3 class="media-overlay-title">Frankenstein</h3>
+                            <div class="media-overlay-meta">Año 2025</div>
+                            <p class="media-overlay-review">
+                                La esperada reinterpretación visual de Guillermo del Toro que profundiza en la soledad de la criatura y los dilemas éticos de la creación humana.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sección: Discos favoritos con Carrusel Horizontal -->
+        <section id="discos" class="profile-section">
+            <div class="section-header section-header-with-controls">
+                <div>
+                    <span class="eyebrow">Colección Sonora</span>
+                    <h2>Discos <span class="text-accent">favoritos</span></h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Disco anterior" type="button">⟨</button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente disco" type="button">⟩</button>
+                </div>
+            </div>
+
+            <div class="scroll-gallery-wrapper">
+                <div class="scroll-gallery">
+
+                    <!-- Disco 1 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/disco-weezer-blue-album.png" alt="Weezer (The Blue Album) — Weezer" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Power Pop / Alt Rock</span>
+                            <h3 class="media-overlay-title">Weezer (The Blue Album)</h3>
+                            <div class="media-overlay-artist">Weezer</div>
+                            <div class="media-overlay-meta">Año 1994</div>
+                            <p class="media-overlay-review">
+                                Clásico del rock alternativo de los noventa, repleto de estribillos memorables, distorsión cruda y temática geek inolvidable.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 2 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/disco-chamaleon-sunday.jpg" alt="Chameleon Sunday — Arc De Soleil" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Indie Surf / Funk</span>
+                            <h3 class="media-overlay-title">Chameleon Sunday</h3>
+                            <div class="media-overlay-artist">Arc De Soleil</div>
+                            <div class="media-overlay-meta">Año 2023</div>
+                            <p class="media-overlay-review">
+                                Guitarras surf retro, calidez sonora y ritmos envolventes perfectos para mantener la concentración programando.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 3 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/disco-divididos.jpg" alt="La Era de la Boludez — Divididos" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Rock Nacional / Funk Rock</span>
+                            <h3 class="media-overlay-title">La Era de la Boludez</h3>
+                            <div class="media-overlay-artist">Divididos</div>
+                            <div class="media-overlay-meta">Año 1993</div>
+                            <p class="media-overlay-review">
+                                Obra fundamental del rock argentino con potencia demoledora, fusión folclórica en 'El Arriero' y virtuosismo puro.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 4 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/disco-aranjuez.png" alt="Concierto de Aranjuez — Paco de Lucía" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Flamenco / Clásico</span>
+                            <h3 class="media-overlay-title">Concierto de Aranjuez</h3>
+                            <div class="media-overlay-artist">Paco de Lucía & Orq. Cadaqués</div>
+                            <div class="media-overlay-meta">Año 1991</div>
+                            <p class="media-overlay-review">
+                                Interpretación histórica donde el genio de Paco de Lucía une la solemnidad clásica de Joaquín Rodrigo con el duende flamenco.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Disco 5 -->
+                    <article class="media-card album-card" tabindex="0">
+                        <img src="img/other/perfil-lucas/disco-aron.png" alt="A Drama on Richard Street — Tremendous Aron" class="media-poster">
+                        <div class="media-overlay">
+                            <span class="media-tag">Indie / Lo-Fi / Instrumental</span>
+                            <h3 class="media-overlay-title">A Drama on Richard Street</h3>
+                            <div class="media-overlay-artist">Tremendous Aron</div>
+                            <div class="media-overlay-meta">Año 2021</div>
+                            <p class="media-overlay-review">
+                                Texturas cálidas, minimalismo y un diseño sonoro suave y envolvente para sesiones de desarrollo y concentración prolongada.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+
     </main>
+
+    <!-- Footer Compartido con botón de volver arriba -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#top" class="btn-top">Volver arriba ↑</a>
+            <p class="footer-credits">
+                Trabajo Práctico 1 — Desarrollo de Sistemas Web Frontend · 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script principal con soporte para carruseles e interactividad -->
     <script src="js/script.js"></script>
 </body>
 </html>

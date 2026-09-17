@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil — Matías | TP1 Frontend</title>
 
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
     <!-- Google Fonts preconnect & stylesheet links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,16 +94,19 @@
 
         <!-- Sección: Películas favoritas -->
         <section id="peliculas">
-            <div class="section-header">
-                <span class="eyebrow">Cinematografía</span>
-                <h2>Películas <span class="text-accent">favoritas</span></h2>
+            <div class="section-header section-header-with-controls">
+                <div>
+                    <span class="eyebrow">Cinematografía</span>
+                    <h2>Películas <span class="text-accent">favoritas</span></h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Película anterior" type="button">⟨</button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente película" type="button">⟩</button>
+                </div>
             </div>
 
             <!-- Scroll Gallery Wrapper-->
             <div class="scroll-gallery-wrapper">
-                <button class="carousel-btn prev-btn" aria-label="Anterior">⟨</button>
-                <button class="carousel-btn next-btn" aria-label="Siguiente">⟩</button>
-                
                 <div class="scroll-gallery">
 
                     <!-- Película 1 -->
@@ -174,15 +180,18 @@
 
         <!-- Sección: Discos favoritos -->
         <section id="discos">
-            <div class="section-header">
-                <span class="eyebrow">Colección Sonora</span>
-                <h2>Discos <span class="text-accent">favoritos</span></h2>
+            <div class="section-header section-header-with-controls">
+                <div>
+                    <span class="eyebrow">Colección Sonora</span>
+                    <h2>Discos <span class="text-accent">favoritos</span></h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Disco anterior" type="button">⟨</button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente disco" type="button">⟩</button>
+                </div>
             </div>
 
             <div class="scroll-gallery-wrapper">
-                <button class="carousel-btn prev-btn" aria-label="Anterior">⟨</button>
-                <button class="carousel-btn next-btn" aria-label="Siguiente">⟩</button>
-
                 <div class="scroll-gallery">
 
                     <!-- Disco 1 -->

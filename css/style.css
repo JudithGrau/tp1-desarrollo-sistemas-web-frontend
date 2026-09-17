@@ -73,6 +73,11 @@ body {
     color: var(--color-bg);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Contenedor principal responsive */
 .container {
     width: min(90%, var(--max-width));
@@ -372,6 +377,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -712,45 +718,52 @@ footer {
     transform: scale(1.25);
 }
 
-/* Carrusel - Botones */
-.carousel-btn {
-    vertical-align: middle;
-    position: absolute;
-    top: 0px; 
-    bottom: 0px; 
-    width: 35px;
-    background: var(--color-surface);
-    border: none;
-    color: var(--color-text);
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
+/* Cabecera de sección con controles de carrusel integrados */
+.section-header-with-controls {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background var(--transition-fast), opacity var(--transition-fast), color var(--transition-fast);
-    opacity: 0;
-    border-radius: var(--radius-medium);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
-.scroll-gallery-wrapper:hover .carousel-btn {
-    opacity: 1;
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Botones de navegación del carrusel */
+.carousel-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 1.4rem;
+    font-family: inherit;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    user-select: none;
 }
 
 .carousel-btn:hover {
-    background: var(--color-blue-dark);
-    color: var(--color-blue);
-    transform: scale(1.05);
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-coral);
+    color: var(--color-coral);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-coral);
 }
 
-.prev-btn {
-    left: -58px;
-}
-
-.next-btn {
-    right: -58px;
+.carousel-btn:active {
+    transform: translateY(0);
 }
 
 
@@ -761,12 +774,23 @@ footer {
     background: linear-gradient(to top, rgba(7, 26, 31, 0.96) 0%, rgba(7, 26, 31, 0.85) 50%, rgba(7, 26, 31, 0.4) 100%);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    padding: 24px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     transition: opacity var(--transition-normal);
+}
+
+.media-overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.media-overlay > :first-child {
+    margin-top: auto;
 }
 
 .media-card:hover .media-overlay,
@@ -813,10 +837,131 @@ footer {
     padding-top: 10px;
 }
 
-/* ------------------------------------
-       Parte responsiva perfil mati
-   ------------------------------------ */
+/* Optimizacion de tipografia y espaciado para tarjetas cuadradas de discos */
+.album-card .media-overlay {
+    padding: 16px 14px;
+}
+
+.album-card .media-tag {
+    font-size: 0.65rem;
+    margin-bottom: 2px;
+}
+
+.album-card .media-overlay-title {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.album-card .media-overlay-artist {
+    font-size: 0.82rem;
+    margin-bottom: 2px;
+}
+
+.album-card .media-overlay-meta {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+}
+
+.album-card .media-overlay-review {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    padding-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Diseno Adaptativo Global (Responsive Design)
+       Breakpoints obligatorios por consigna: 1200px, 900px y 400px
+   -------------------------------------------------------------------------- */
+
+/* Breakpoint 1: max-width 1200px (Desktop medio / Laptop) */
+@media (max-width: 1200px) {
+    .container {
+        width: min(92%, var(--max-width));
+    }
+
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Breakpoint 2: max-width 900px (Tablets y pantallas intermedias) */
 @media (max-width: 900px) {
+    :root {
+        --navbar-height: auto;
+    }
+
+    /* Navbar adaptada */
+    .navbar {
+        position: sticky;
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .navbar-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero general y portada */
+    .hero-section {
+        padding: 40px 0 24px 0;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 8px;
+    }
+
+    /* Grilla de integrantes en 2 columnas */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Tarjetas de doble reborde */
+    .double-bezel-inner {
+        padding: 24px;
+    }
+
+    /* Seccion Hero de perfiles */
+    .profile-hero-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .profile-avatar-wrapper {
+        max-width: 170px;
+        margin: 0 auto;
+    }
+
+    .profile-details {
+        min-width: 100%;
+    }
+
+    .profile-meta-info {
+        justify-content: center;
+    }
+
+    .profile-socials {
+        justify-content: center;
+    }
+
+    /* Carrusel de peliculas y discos */
     .media-card {
         flex: 0 0 220px;
         width: 220px;
@@ -824,21 +969,153 @@ footer {
     }
 
     .media-card.album-card {
-        flex: 0 0 240px;
-        width: 240px;
-        min-width: 240px;
-    }
-    .prev-btn {
-        left: -48px;
+        flex: 0 0 250px;
+        width: 250px;
+        min-width: 250px;
     }
 
-    .next-btn {
-        right: -48px;
+    .album-card .media-overlay {
+        padding: 14px 12px;
     }
 
+    .album-card .media-overlay-title {
+        font-size: 0.95rem;
+    }
+
+    .album-card .media-overlay-review {
+        font-size: 0.76rem;
+        line-height: 1.3;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.25rem;
+    }
 }
 
+/* Breakpoint 3: max-width 400px (Mobile / Smartphones compactos) */
 @media (max-width: 400px) {
+    .container {
+        width: 94%;
+    }
+
+    /* Navbar compacta sin desborde */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    .nav-back {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 6px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.72rem;
+        padding: 4px 6px;
+    }
+
+    /* Tipografias y encabezados */
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Hero section */
+    .hero-section {
+        padding: 24px 0 16px 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Grilla de equipo: 1 columna completa */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Doble reborde adaptado para maximizar area util */
+    .double-bezel {
+        padding: 4px;
+    }
+
+    .double-bezel-inner {
+        padding: 16px 12px;
+    }
+
+    /* Perfil individual */
+    .profile-main-content {
+        padding-top: 16px;
+    }
+
+    .profile-name {
+        font-size: 1.6rem;
+    }
+
+    .profile-avatar-wrapper {
+        max-width: 140px;
+    }
+
+    .profile-meta-info {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+
+    .profile-socials {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-socials a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-list li {
+        font-size: 0.88rem;
+    }
+
+    /* Carrusel y tarjetas de peliculas / discos */
+    .scroll-gallery {
+        gap: 14px;
+        padding: 8px 2px 18px 2px;
+    }
+
     .media-card {
         flex: 0 0 190px;
         width: 190px;
@@ -846,24 +1123,68 @@ footer {
     }
 
     .media-card.album-card {
-        flex: 0 0 200px;
-        width: 200px;
-        min-width: 200px;
+        flex: 0 0 230px;
+        width: 230px;
+        min-width: 230px;
     }
 
     .media-overlay {
-        padding: 16px;
+        padding: 12px;
     }
 
     .media-overlay-title {
-        font-size: 1rem;
+        font-size: 0.92rem;
     }
 
     .media-overlay-review {
-        font-size: 0.78rem;
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
-    .prev-btn {
-        left: -38px;
+    .album-card .media-overlay {
+        padding: 10px 8px;
+    }
+
+    .album-card .media-overlay-title {
+        font-size: 0.88rem;
+    }
+
+    .album-card .media-overlay-artist {
+        font-size: 0.74rem;
+    }
+
+    .album-card .media-overlay-meta {
+        font-size: 0.68rem;
+        margin-bottom: 4px;
+    }
+
+    .album-card .media-overlay-review {
+        font-size: 0.70rem;
+        line-height: 1.25;
+        padding-top: 4px;
+    }
+
+    .section-header-with-controls {
+        align-items: center;
+    }
+
+    .carousel-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 1.1rem;
+    }
+
+    /* Botones y controles accesibles */
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
     }
 }

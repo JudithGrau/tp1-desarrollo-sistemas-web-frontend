@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <!-- Degradado de fondo Coral / Naranja oficial del proyecto -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF907A" />
+      <stop offset="100%" stop-color="#FF6B4A" />
+    </linearGradient>
+
+    <!-- Degradado Azul Primario para el Monitor y Planeta -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Sombra suave para profundidad tridimensional -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.28" />
+    </filter>
+  </defs>
+
+  <!-- Fondo redondeado tipo app icon (Squircle) con tono coral del proyecto -->
+  <rect width="128" height="128" rx="28" fill="url(#bgGradient)" />
+
+  <!-- Monitor centrado y ampliado para máxima legibilidad en pestaña -->
+  <g filter="url(#shadow)">
+    
+    <!-- Soporte y Base del Monitor centrados -->
+    <!-- Base horizontal -->
+    <rect x="40" y="98" width="48" height="8" rx="4" fill="#071A1F" stroke="#164E63" stroke-width="1.5" />
+    <!-- Cuello del monitor -->
+    <path d="M58 86 L70 86 L73 98 L55 98 Z" fill="#102A30" />
+
+    <!-- Chasis exterior del Monitor (Centrado: 96px de ancho) -->
+    <rect x="16" y="18" width="96" height="68" rx="10" fill="#071A1F" stroke="#38BDF8" stroke-width="2.8" />
+
+    <!-- Pantalla interior (Display: 84px de ancho) -->
+    <rect x="22" y="24" width="84" height="54" rx="6" fill="#0F2B32" />
+
+    <!-- Ilustración en Pantalla: Planeta Gigante con Anillo -->
+    <!-- Planeta (Esfera ampliada) -->
+    <circle cx="64" cy="51" r="18" fill="url(#blueGradient)" />
+
+    <!-- Brillo especular y volumen en el planeta -->
+    <path d="M53 39 A 18 18 0 0 1 77 44 A 18 18 0 0 0 53 39 Z" fill="#7DD3FC" opacity="0.65" />
+
+    <!-- Anillo planetario (tramo posterior detrás de la esfera) -->
+    <path d="M34 56 C 34 46, 94 36, 94 44" stroke="#F1F5F9" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+    <!-- Anillo planetario (tramo frontal por delante de la esfera) -->
+    <path d="M34 56 C 34 66, 94 56, 94 44" stroke="#F1F5F9" stroke-width="4.2" stroke-linecap="round" fill="none" />
+
+    <!-- Detalles de microestrellas / elementos luminosos en pantalla -->
+    <circle cx="33" cy="34" r="2" fill="#38BDF8" />
+    <circle cx="95" cy="33" r="2.2" fill="#FF8066" />
+    <circle cx="89" cy="69" r="1.8" fill="#7DD3FC" />
+    <circle cx="36" cy="68" r="1.5" fill="#F1F5F9" />
+  </g>
+</svg>
