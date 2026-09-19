@@ -100,6 +100,14 @@ Expande y alterna datos biograficos y de certificaciones complementarias de form
 
 ---
 
+## Capturas de pantalla
+
+![Portada](./screenshot/screenshot_Portada.png)
+![Perfil](./screenshot/screenshot_Example_Perfil.png)
+![Bitacora](./screenshot/screenshot_Bitacora.png)
+
+---
+
 ## Diseno Adaptativo (Responsive Design)
 
 El proyecto cuenta con una arquitectura adaptable en `css/style.css` que responde a los tres breakpoints obligatorios de la consigna:
@@ -122,11 +130,31 @@ El proyecto cuenta con una arquitectura adaptable en `css/style.css` que respond
 
 ---
 
+## Demo
+
+🔗 Sitio publicado: [tp1-desarrollo-sistemas-web-fronten.vercel.app](https://tp1-desarrollo-sistemas-web-fronten.vercel.app/) 
+
+---
+
+## Evolucion del Proyecto
+
+Este TP1 sento la base tecnica del equipo: estructura de repositorio compartido, sistema de diseno propio (double-bezel, tokens de color, tipografia Sora/Inter) y una dinamica de trabajo colaborativo con commits individuales. De cara a los proximos trabajos practicos, el equipo planea:
+
+- Profundizar la modularizacion del CSS (separar variables, componentes y utilidades en archivos distintos).
+- Sumar mas interacciones dinamicas y, eventualmente, consumo de datos desde una API externa.
+- Mejorar la cobertura de testing manual en distintos navegadores y dispositivos reales.
+- Revisar accesibilidad (contraste, navegacion por teclado, atributos ARIA) en mayor profundidad.
+
+---
+
 ## Uso de Inteligencia Artificial y Criterio de Privacidad
 
 En cumplimiento con la seccion didactica y transversal del trabajo practico:
 
 - **Herramientas y Modelos Utilizados**: Se empleo Antigravity con modelos de lenguaje avanzados como asistente tecnico de programacion en pares (Pair Programming).
-- **Alcance de la Asistencia**: Asistencia en la modularizacion de estilos CSS, estructuracion semantica de `lucas.html`, arquitectura de media queries adaptativas y documentacion tecnica.
+- **Plan utilizado**: Plan gratuito en todos los casos.
+- **Alcance de la Asistencia**: Asistencia en la modularizacion de estilos CSS, estructuracion semantica de `lucas.html`, arquitectura de media queries adaptativas y documentacion tecnica. En el caso de Mauro, en la redaccion de mauro.html, bitacora.html y este README.md.
 - **Criterio de Privacidad y Seguridad**: No se incorporaron credenciales reales ni claves privadas en el repositorio. Se mantuvieron las directivas de seguridad locales y el seguimiento incremental en `docs/estado_actual.md` protegido en `.gitignore`.
 - **Criterio Propio y Adaptacion**: Cada bloque de codigo generado fue revisado, adaptado a la arquitectura de diseno preexistente definida por el equipo (`double-bezel`, paleta de tokens `:root`, convenciones de nombres) y validado manualmente para asegurar total armonia visual y estructural.
+
+---
