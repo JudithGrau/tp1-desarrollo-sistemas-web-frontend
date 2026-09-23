@@ -52,17 +52,17 @@
         <!-- Interacción JS de Portada -->
         <section class="spotlight-interactive-section">
             <div class="double-bezel">
-                <div class="double-bezel-inner" style="text-align: center;">
+                <div class="double-bezel-inner text-center">
                     <span class="eyebrow">Dinámica Grupal</span>
                     <h3>¿A quién descubrimos hoy?</h3>
-                    <p style="margin-bottom: 24px;">Activá la selección aleatoria para conocer al instante el rol y enfoque de cada integrante.</p>
+                    <p class="mb-4">Activá la selección aleatoria para conocer al instante el rol y enfoque de cada integrante.</p>
                     
                     <button id="btn-random-member" class="btn btn-primary" type="button">
                         Seleccionar integrante al azar ✦
                     </button>
 
                     <!-- Salida del script JS -->
-                    <div id="random-member-display" style="margin-top: 24px;" aria-live="polite"></div>
+                    <div id="random-member-display" class="mt-4" aria-live="polite"></div>
                 </div>
             </div>
         </section>
@@ -123,8 +123,8 @@
                     <div class="double-bezel-inner member-card-content">
                         <div class="member-avatar-slot">
                             <img src="img/mauro.png" alt="Avatar de Mauro" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="member-avatar-icon" style="display: none;">📝</div>
-                            <span class="member-avatar-label" style="display: none;">Mauro</span>
+                            <div class="member-avatar-icon d-none">📝</div>
+                            <span class="member-avatar-label d-none">Mauro</span>
                         </div>
                         <div>
                             <h3 class="member-name">Mauro</h3>

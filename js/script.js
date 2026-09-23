@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="spotlight-box">
                     <img src="${elegido.img}" alt="Avatar de ${elegido.nombre}" class="spotlight-box-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'72\' height=\'72\'><rect width=\'72\' height=\'72\' fill=\'%23102A30\'/><text x=\'50%\' y=\'55%\' fill=\'%2338BDF8\' font-size=\'28\' text-anchor=\'middle\' dy=\'.3em\'>✦</text></svg>'">
                     <div>
-                        <h4 style="font-size: 1.2rem; color: var(--color-coral); margin-bottom: 4px;">${elegido.nombre}</h4>
-                        <p style="font-size: 0.85rem; color: var(--color-blue); margin-bottom: 8px; font-weight: 600;">${elegido.rol}</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 12px;">${elegido.descripcion}</p>
-                        <a href="${elegido.link}" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">Ver perfil completo →</a>
+                        <h4 class="spotlight-title">${elegido.nombre}</h4>
+                        <p class="spotlight-role">${elegido.rol}</p>
+                        <p class="spotlight-desc">${elegido.descripcion}</p>
+                        <a href="${elegido.link}" class="btn btn-secondary spotlight-btn">Ver perfil completo →</a>
                     </div>
                 </div>
             `;
@@ -75,6 +75,26 @@ document.addEventListener('DOMContentLoaded', () => {
         btnJudith.addEventListener('click', () => {
             const randomIndex = Math.floor(Math.random() * recomendaciones.length);
             displayJudith.textContent = recomendaciones[randomIndex];
+        });
+    }
+
+    // ----------------------------------------------------
+    // 3. Perfil Mauro: Revelador de información adicional
+    // ----------------------------------------------------
+    const btnMauro = document.getElementById('btn-mauro-more');
+    const displayMauro = document.getElementById('mauro-more-display');
+
+    if (btnMauro && displayMauro) {
+        const facts = [
+            "Tengo certificación en QA Manual (Coderhouse).",
+            "También tengo una certificación en bases de datos (GCBA).",
+            "En este TP fui responsable de la bitácora y el README: documentar el proceso del equipo tan importante como el código.",
+            "Cuando no estoy programando, seguramente estoy viendo una película o escuchando alguno de mis discos favoritos."
+        ];
+
+        btnMauro.addEventListener('click', () => {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            displayMauro.textContent = randomFact;
         });
     }
     // -----------------------------------------------------------------

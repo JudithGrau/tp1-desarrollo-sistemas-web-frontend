@@ -36,32 +36,32 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 40px;">
+    <main class="container profile-main-content">
 
         <!-- 1. Tarjeta Principal de Presentación (Double-Bezel) -->
-        <section style="padding: 20px 0 40px 0;">
+        <section class="profile-section-hero">
             <div class="double-bezel">
-                <div class="double-bezel-inner" style="display: flex; flex-wrap: wrap; gap: 36px; align-items: center;">
-                    <div class="member-avatar-slot" style="max-width: 200px; margin: 0 auto;">
+                <div class="double-bezel-inner profile-hero-layout">
+                    <div class="member-avatar-slot profile-avatar-wrapper">
                         <img src="img/judith.png" alt="Foto de Judith Grau" class="member-avatar-img" onerror="this.src='img/ju_pcV2.png';">
                     </div>
 
-                    <div style="flex: 1; min-width: 280px;">
+                    <div class="profile-details">
                         <span class="eyebrow">Coordinación & Portada</span>
-                        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 8px;">Judith Grau</h1>
-                        <p style="color: var(--color-blue); font-weight: 600; margin-bottom: 16px;">Full Stack Developer & Diseño UX</p>
+                        <h1 class="profile-name">Judith Grau</h1>
+                        <p class="profile-role">Full Stack Developer & Diseño UX</p>
                         
                         <!-- Datos obligatorios por consigna: Ciudad y Edad -->
-                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px;">
+                        <div class="profile-meta-info">
                             <p><strong><i class="fa-solid fa-location-dot text-accent"></i> Ciudad:</strong> Buenos Aires, Argentina</p>
                             <p><strong><i class="fa-solid fa-cake-candles text-accent"></i> Cumpleaños:</strong> 29 de noviembre</p>
                         </div>
 
-                        <p style="margin-bottom: 24px;">
+                        <p class="profile-bio-text">
                             Desarrollo soluciones web funcionales e intuitivas combinando desarrollo Frontend, Backend y experiencia de usuario. En este TP1 asumí el rol de coordinación general, arquitectura del repositorio y desarrollo de la portada grupal.
                         </p>
 
-                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <div class="profile-socials">
                             <a href="https://github.com/JudithGrau" class="btn btn-secondary" target="_blank" rel="noreferrer">
                                 <i class="fa-brands fa-github"></i> GitHub ↗
                             </a>
@@ -75,15 +75,15 @@
         </section>
 
         <!-- 2. Requisitos de Consigna: Habilidades, Películas y Discos -->
-        <section style="padding: 20px 0;">
-            <div class="team-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <section class="profile-section">
+            <div class="team-grid profile-cards-grid">
                 
                 <!-- 4 Habilidades Obligatorias -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-code"></i> Skills</span>
-                        <h3 style="margin-bottom: 16px;">Habilidades</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Habilidades</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-blue">1. React & TypeScript:</strong> Desarrollo de interfaces escalables y tipado robusto.</li>
                             <li><strong class="text-blue">2. HTML5 Semántico & CSS Modular:</strong> Maquetación accesible y responsive design.</li>
                             <li><strong class="text-blue">3. Java & Spring Boot:</strong> Creación y consumo de servicios y APIs REST seguras.</li>
@@ -94,10 +94,10 @@
 
                 <!-- 3 Películas Favoritas Obligatorias -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-film"></i> Cine</span>
-                        <h3 style="margin-bottom: 16px;">Películas Favoritas</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Películas Favoritas</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-accent">1. Interstellar:</strong> Una obra maestra visual sobre ciencia, tiempo y perseverancia.</li>
                             <li><strong class="text-accent">2. The Social Network:</strong> El retrato fundacional del desarrollo de producto y código.</li>
                             <li><strong class="text-accent">3. Inception:</strong> Arquitectura mental llevada a una narrativa estructurada e impecable.</li>
@@ -107,10 +107,10 @@
 
                 <!-- 3 Discos Favoritos Obligatorios -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-compact-disc"></i> Música</span>
-                        <h3 style="margin-bottom: 16px;">Discos Favoritos</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Discos Favoritos</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-blue">1. Random Access Memories</strong> — Daft Punk</li>
                             <li><strong class="text-blue">2. Currents</strong> — Tame Impala</li>
                             <li><strong class="text-blue">3. Abbey Road</strong> — The Beatles</li>
@@ -122,18 +122,18 @@
         </section>
 
         <!-- 3. Interacción Dinámica con JavaScript (Requisito Propio del Perfil) -->
-        <section style="padding: 30px 0 60px 0;">
+        <section class="profile-section-dynamic">
             <div class="double-bezel">
-                <div class="double-bezel-inner" style="text-align: center;">
+                <div class="double-bezel-inner text-center">
                     <span class="eyebrow">Interacción Dinámica</span>
                     <h3>¿Querés una recomendación de Judith para programar?</h3>
-                    <p style="margin-bottom: 20px;">Hacé clic para generar al azar una combinación de mi disco o película sugerida para una sesión de código.</p>
+                    <p class="profile-bio-text">Hacé clic para generar al azar una combinación de mi disco o película sugerida para una sesión de código.</p>
                     
                     <button id="btn-judith-quote" class="btn btn-primary" type="button">
                         Generar recomendación ✦
                     </button>
 
-                    <div id="judith-quote-display" style="margin-top: 20px; font-weight: 500; min-height: 28px; color: var(--color-coral);" aria-live="polite"></div>
+                    <div id="judith-quote-display" class="dynamic-display" aria-live="polite"></div>
                 </div>
             </div>
         </section>

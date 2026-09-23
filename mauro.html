@@ -36,34 +36,32 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 40px;">
+    <main class="container profile-main-content">
 
         <!-- 1. Tarjeta Principal de Presentación (Double-Bezel) -->
-        <section style="padding: 20px 0 40px 0;">
+        <section class="profile-section-hero">
             <div class="double-bezel">
-                <div class="double-bezel-inner" style="display: flex; flex-wrap: wrap; gap: 36px; align-items: center;">
-                    <div class="member-avatar-slot" style="max-width: 200px; margin: 0 auto;">
+                <div class="double-bezel-inner profile-hero-layout">
+                    <div class="member-avatar-slot profile-avatar-wrapper">
                         <img src="img/mauro.png" alt="Avatar de Mauro" class="member-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="member-avatar-icon" style="display: none;">📝</div>
-                        <span class="member-avatar-label" style="display: none;">Mauro</span>
                     </div>
 
-                    <div style="flex: 1; min-width: 280px;">
+                    <div class="profile-details">
                         <span class="eyebrow"><i class="fa-solid fa-clipboard-list"></i> Bitácora & Documentación</span>
-                        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 8px;">Mauro Flores</h1>
-                        <p style="color: var(--color-blue); font-weight: 600; margin-bottom: 16px;">Front End Developer & QA</p>
+                        <h1 class="profile-name">Mauro Flores</h1>
+                        <p class="profile-role">Front End Developer & QA</p>
 
                         <!-- Datos obligatorios por consigna: Ciudad y Edad -->
-                        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px;">
+                        <div class="profile-meta-info">
                             <p><strong><i class="fa-solid fa-location-dot text-accent"></i> Ciudad:</strong> Ciudad Autónoma de Buenos Aires, Argentina</p>
                             <p><strong><i class="fa-solid fa-cake-candles text-accent"></i> Edad:</strong> 33 años</p>
                         </div>
 
-                        <p style="margin-bottom: 24px;">
+                        <p class="profile-bio-text">
                             Estudiante de la Tecnicatura Superior en Desarrollo de Software (IFTS N°29), sumo experiencia en QA Manual y bases de datos, lo que me da una mirada atenta al detalle a la hora de construir y probar interfaces. En este TP1 estuve a cargo de mi perfil, la bitácora del equipo y el README.
                         </p>
 
-                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <div class="profile-socials">
                             <a href="https://github.com/floresmauroezequiel1992-beep" class="btn btn-secondary" target="_blank" rel="noreferrer">
                                 <i class="fa-brands fa-github"></i> GitHub ↗
                             </a>
@@ -74,15 +72,15 @@
         </section>
 
         <!-- 2. Requisitos de Consigna: Habilidades, Películas y Discos -->
-        <section style="padding: 20px 0;">
-            <div class="team-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <section class="profile-section">
+            <div class="team-grid profile-cards-grid">
 
                 <!-- 4 Habilidades Obligatorias -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-code"></i> Skills</span>
-                        <h3 style="margin-bottom: 16px;">Habilidades</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Habilidades</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-blue">1. Front End Development:</strong> HTML5, CSS3 y JavaScript para interfaces adaptables.</li>
                             <li><strong class="text-blue">2. QA Manual:</strong> diseño y ejecución de casos de prueba, reporte de bugs.</li>
                             <li><strong class="text-blue">3. SQL & Bases de Datos:</strong> consultas y modelado en MySQL.</li>
@@ -93,10 +91,10 @@
 
                 <!-- 3 Películas Favoritas Obligatorias -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-film"></i> Cine</span>
-                        <h3 style="margin-bottom: 16px;">Películas Favoritas</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Películas Favoritas</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-accent">1. Buenos Muchachos</strong></li>
                             <li><strong class="text-accent">2. Perdidos en Tokio</strong></li>
                             <li><strong class="text-accent">3. Hereditary</strong></li>
@@ -106,10 +104,10 @@
 
                 <!-- 3 Discos Favoritos Obligatorios -->
                 <article class="double-bezel">
-                    <div class="double-bezel-inner" style="height: 100%;">
+                    <div class="double-bezel-inner h-100">
                         <span class="eyebrow"><i class="fa-solid fa-compact-disc"></i> Música</span>
-                        <h3 style="margin-bottom: 16px;">Discos Favoritos</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+                        <h3 class="mb-3">Discos Favoritos</h3>
+                        <ul class="profile-list">
                             <li><strong class="text-blue">1. Blood Sugar Sex Magik</strong> — Red Hot Chili Peppers</li>
                             <li><strong class="text-blue">2. Jar of Flies</strong> — Alice in Chains</li>
                             <li><strong class="text-blue">3. Discovery</strong> — Daft Punk</li>
@@ -121,18 +119,18 @@
         </section>
 
         <!-- 3. Interacción Dinámica con JavaScript (Requisito Propio del Perfil) -->
-        <section style="padding: 30px 0 60px 0;">
+        <section class="profile-section-dynamic">
             <div class="double-bezel">
-                <div class="double-bezel-inner" style="text-align: center;">
+                <div class="double-bezel-inner text-center">
                     <span class="eyebrow">Interacción Dinámica</span>
                     <h3>¿Querés saber más sobre mí?</h3>
-                    <p style="margin-bottom: 20px;">Hacé clic para revelar un dato extra que no está en la tarjeta de arriba.</p>
+                    <p class="profile-bio-text">Hacé clic para revelar un dato extra que no está en la tarjeta de arriba.</p>
 
                     <button id="btn-mauro-more" class="btn btn-primary" type="button">
                         Ver más sobre mí ✦
                     </button>
 
-                    <div id="mauro-more-display" style="margin-top: 20px; font-weight: 500; min-height: 28px; color: var(--color-coral);" aria-live="polite"></div>
+                    <div id="mauro-more-display" class="dynamic-display" aria-live="polite"></div>
                 </div>
             </div>
         </section>
@@ -150,27 +148,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        
-        // Interacción propia del perfil Mauro: tarjeta expandible con datos extra.
-        (function () {
-            const facts = [
-                "Tengo certificación en QA Manual (Coderhouse).",
-                "También tengo una certificación en bases de datos (GCBA).",
-                "En este TP fui responsable de la bitácora y el README: documentar el proceso del equipo tan importante como el código.",
-                "Cuando no estoy programando, seguramente estoy viendo una película o escuchando alguno de mis discos favoritos."
-            ];
-
-            const btn = document.getElementById("btn-mauro-more");
-            const display = document.getElementById("mauro-more-display");
-
-            if (btn && display) {
-                btn.addEventListener("click", function () {
-                    const randomFact = facts[Math.floor(Math.random() * facts.length)];
-                    display.textContent = randomFact;
-                });
-            }
-        })();
-    </script>
 </body>
 </html>
