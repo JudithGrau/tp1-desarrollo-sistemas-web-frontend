@@ -51,9 +51,18 @@
             <div class="double-bezel">
                 <div class="double-bezel-inner">
                     <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Entrada 1</span>
-                    <h3 class="mb-2">Organización inicial</h3>
-                    <p><strong class="text-blue">Decisión:</strong> Decisión: definimos los roles del equipo y la estructura del proyecto. Judith coordina y desarrolla la portada, Matías define el sistema visual, Lucas trabaja el responsive, y Mauro se encarga de la bitácora y el README. Además de su rol específico, cada integrante desarrolla su propio perfil individual.</p>
-                    <p class="mt-2"><strong class="text-blue">Acordamos:</strong> trabajar sobre un repositorio compartido en GitHub, usar una identidad visual común para todas las páginas y hacer commits progresivos para que quede evidencia del trabajo de cada uno.</p>
+                    <h3 class="mb-2">Organización inicial y acuerdo de trabajo en equipo</h3>
+                   
+                    <p><strong class="text-blue">Responsables:</strong> Judith, Matías, Lucas y Mauro.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Establecimos un canal de comunicación diario y definimos la arquitectura del proyecto para trabajar de forma modular y equitativa. Se acordó que cada integrante desarrollaría su propio perfil individual y asumiría además un rol transversal:</p>
+                    
+                    <ul class="mt-2" style="padding-left: 20px;">
+                        <li> Judith: Coordinación general, integración del repositorio y desarrollo de la portada (index.html).</li>
+                        <li> Matías: Sistema visual, diseño de componentes y arquitectura CSS (style.css).</li>
+                        <li> Lucas: Adaptabilidad responsive, control estricto de breakpoints (400px, 900px, 1200px) y testing.</li>
+                        <li> Mauro: Redacción de la bitácora grupal (bitacora.html) y documentación obligatoria en el README.md. Además, acordamos trabajar mediante ramas en Git y utilizar la convención de Conventional Commits (feat:, style:, fix:, docs:) para mantener un historial limpio y transparente.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -63,9 +72,16 @@
             <div class="double-bezel">
                 <div class="double-bezel-inner">
                     <span class="eyebrow"><i class="fa-solid fa-palette"></i> Entrada 2</span>
-                    <h3 class="mb-2">Identidad visual</h3>
-                    <p><strong class="text-blue">Decisión:</strong> elegimos las tipografías Inter y Sora de Google Fonts y un estilo de tarjetas "double-bezel" para todas las secciones (portada y perfiles).</p>
-                    <p class="mt-2"><strong class="text-blue">Motivo:</strong> buscamos una estética moderna y consistente, con una navegación tipo "navbar" fija en todas las páginas para que nadie tenga que depender del botón Atrás del navegador.</p>
+                    <h3 class="mb-2">Definición del sistema visual y arquitectura de estilos</h3>
+                    
+                    <p><strong class="text-blue">Responsable:</strong> Matías.</p>
+
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong>Creamos la base de css/style.css definiendo variables globales en :root para asegurar consistencia visual en todo el sitio. Seleccionamos una paleta con fondo oscuro de contraste suave (#071A1F), superficie (#102A30), y dos acentos cromáticos principales: azul cyan (#38BDF8) y coral (#FF8066). Para la tipografía se importaron de Google Fonts Sora (titulares y jerarquía de peso visual) e Inter (lectura de cuerpo de texto fluida). Además, se diseñó el componente estructural contenedor denominado double-bezel para unificar las tarjetas de todo el equipo.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Dificultad:</strong> Garantizar que todos los integrantes utilicen las mismas clases y espaciados sin pisar estilos individuales ni generar inconsistencias visuales.</p>
+               
+                    <p class="mt-2"><strong class="text-blue">Solución:</strong> Se centralizaron los estilos de botones (.btn-primary, .btn-secondary), badges (.eyebrow), cards y navbar en clases utilitarias compartidas antes de comenzar la maquetación de los perfiles individuales.</p>  
+
                 </div>
             </div>
         </section>
@@ -75,9 +91,16 @@
             <div class="double-bezel">
                 <div class="double-bezel-inner">
                     <span class="eyebrow"><i class="fa-solid fa-triangle-exclamation"></i> Entrada 3</span>
-                    <h3 class="mb-2">Dificultad con el entorno de trabajo</h3>
-                    <p><strong class="text-blue">Problema:</strong> al clonar el repositorio grupal con GitHub Desktop, apareció el error "Unable to merge unrelated histories" porque se estaba intentando traer el repo del TP1 sobre la carpeta de otro proyecto ya existente.</p>
-                    <p class="mt-2"><strong class="text-blue">Solución:</strong> se clonó el repositorio correcto (<code>tp1-desarrollo-sistemas-web-frontend</code>) en una carpeta local nueva y vacía, evitando así mezclar historiales de Git de proyectos distintos.</p>
+                    <h3 class="mb-2">Portada, integración y navegación bidireccional</h3>
+                   
+                    <p><strong class="text-blue">Responsable:</strong> Judith</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Se maquetó index.html presentando la identidad y propósito del equipo, junto con una grilla modular de 4 tarjetas que vinculan directamente a cada integrante (judith.html, matias.html, lucas.html, mauro.html). Se implementó una barra de navegación fija (sticky) con efecto glassmorphism.</p>
+
+                    <p class="mt-2"><strong class="text-blue">Dificultad:</strong> La consigna exige que nadie deba depender del botón "Atrás" del navegador para recorrer el sitio web.</p>
+             
+                    <p class="mt-2"><strong class="text-blue">Solución:</strong> Se estructuró una navegación cruzada completa: en el navbar principal se colocaron accesos a todas las secciones y perfiles; en cada perfil se agregó un botón prominente ← Volver al inicio; y en el pie de página se incorporó un botón de retorno rápido al inicio (Volver arriba ↑).</p>
+
                 </div>
             </div>
         </section>
@@ -87,9 +110,15 @@
             <div class="double-bezel">
                 <div class="double-bezel-inner">
                     <span class="eyebrow"><i class="fa-solid fa-code-branch"></i> Entrada 4</span>
-                    <h3 class="mb-2">Avance de perfiles individuales</h3>
-                    <p><strong class="text-blue">Cambios:</strong> cada integrante desarrolló su propia página de perfil siguiendo el mismo sistema de diseño de la portada (navbar, tarjetas "double-bezel", datos obligatorios de ciudad, edad, habilidades, películas y discos, más una interacción propia en JavaScript).</p>
-                    <p class="mt-2"><strong class="text-blue">Próximos pasos:</strong> terminar de revisar el diseño responsive en 400px, 900px y 1200px, y completar el README con la documentación final del proyecto y el uso de IA.</p>
+                    <h3 class="mb-2">Desarrollo paralelo de perfiles individuales y requisitos de contenido</h3>
+                   
+                    <p><strong class="text-blue">Responsables:</strong> Judith, Matías, Lucas y Mauro.
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Cada integrante maquetó su página individual respetando la estructura semántica y la información requerida por la rúbrica: fotografía o avatar representativo, nombre, ciudad, cumpleaños/edad, 4 habilidades técnicas/blandas, 3 películas favoritas y 3 discos recomendados.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Dificultad:</strong> Unificar la gran cantidad de datos personales y listas de favoritos sin sobrecargar las tarjetas ni romper la armonía visual del sitio.
+
+                    <p class="mt-2"><strong class="text-blue">Solución:</strong> Se utilizó la estructura de grillas CSS (grid-template-columns) adaptada dentro de tarjetas double-bezel, organizando habilidades, cine y música en columnas y listas estilizadas con íconos temáticos para facilitar una lectura rápida y atractiva.</p>
                 </div>
             </div>
         </section>
@@ -99,13 +128,58 @@
             <div class="double-bezel">
                 <div class="double-bezel-inner">
                     <span class="eyebrow"><i class="fa-solid fa-rocket"></i> Entrada 5</span>
-                    <h3 class="mb-2">Optimización responsive, testing y puesta a punto final</h3>
-                    <p><strong class="text-blue">Adaptación y diseño:</strong> se adaptó el sitio completo a todos los formatos responsive requeridos (breakpoints de 400px, 900px y 1200px), asegurando una navegación fluida y sin desbordes horizontales en ningún dispositivo. Asimismo, se diseñó e integró el favicon oficial del proyecto en formato SVG vectorial escalable en todas las páginas.</p>
-                    <p class="mt-2"><strong class="text-blue">Testing y despliegue:</strong> se llevaron a cabo pruebas exhaustivas de interfaz y usabilidad en diferentes resoluciones, resolviendo ajustes de maquetación, tipografías y optimización en controles de componentes dinámicos. Para concluir, se finalizó la documentación técnica del README y se realizó el despliegue a producción en la plataforma Vercel.</p>
+                    <h3 class="mb-2">Dinamismo con JavaScript y control de consola</h3>
+                    
+                    <p><strong class="text-blue">Responsables:</strong> Judith, Matías, Lucas y Mauro.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Diseñamos interacciones dinámicas personalizadas y no repetitivas para aportar valor real:</p>
+                   
+                    <ul class="mt-2" style="padding-left: 20px;">
+                        <li> Portada: Un selector aleatorio ("¿A quién conocemos hoy?") que destaca al azar a un integrante, su rol y acceso directo a su página.</li>
+                        <li> Perfiles individuales: Cada perfil incorporó una lógica propia (como generadores de recomendaciones para programar, tarjetas de datos curiosos o toggles interactivos de contenido).</li>
+                    </ul>
+                    <p class="mt-2"><strong class="text-blue">Dificultad:</strong> Al centralizar el código en un único archivo js/script.js, el navegador lanzaba errores en la consola (TypeError: null is not an object) al buscar elementos interactivos que pertenecían a otras vistas.</p>
+                    <p class="mt-2"><strong class="text-blue">Solución:</strong> Se aplicó programación defensiva modular: cada bloque de interacción comprueba primero la existencia de los selectores en el DOM (if (elemento) { ... }) antes de asociar el addEventListener, garantizando una consola totalmente limpia de errores en todas las páginas.</p>
+               
                 </div>
             </div>
         </section>
 
+        <!--Entrada 6 -->
+        <section class="profile-section">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-clipboard-check"></i> Entrada 6</span>
+                    <h3 class="mb-2">Adaptabilidad responsive y verificación de breakpoints</h3>
+                   
+                    <p><strong class="text-blue">Responsable:</strong> Lucas.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Se revisó minuciosamente el comportamiento del sitio en los tres puntos de quiebre obligatorios: 400px (móviles compactos), 900px (tablets e iPad en vertical) y 1200px (pantallas de escritorio estándar).</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Dificultad:</strong> En pantallas pequeñas (400px), los enlaces del navbar generaban desborde horizontal (overflow-x) y las tarjetas en grilla quedaban demasiado comprimidas.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Solución:</strong> Se ajustaron las media queries reduciendo el padding de los contenedores (double-bezel-inner), achicando proporcionalmente los tamaños de fuente con clamp() y flexibilizando las columnas mediante minmax() en CSS Grid para permitir que las tarjetas ocupen el 100% del ancho móvil sin provocar scroll horizontal indeseado.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Entrada 7 -->
+        <section class="profile-section">
+            <div class="double-bezel">
+                <div class="double-bezel-inner">
+                    <span class="eyebrow"><i class="fa-solid fa-clipboard-list"></i> Entrada 7</span>
+                    <h3 class="mb-2">Despliegue en Vercel, auditoría de IA y cierre del README</h3>
+                   
+                    <p><strong class="text-blue">Responsables:</strong> Judith (Despliegue a producción) y Mauro (Documentación técnica).</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Decisión:</strong> Una vez finalizada la integración del código, Judith se encargó de vincular el repositorio público de GitHub con la plataforma Vercel para realizar el despliegue del proyecto a producción. Una vez generado el entorno en vivo y tras verificar que la navegación y los breakpoints funcionaban correctamente en la web, Mauro estructuró el README.md.</p>
+                   
+                    <p class="mt-2"><strong class="text-blue">Proceso de documentación:</strong> Mauro documentó la URL final generada por Vercel junto con la guía técnica completa exigida: integrantes con sus perfiles de GitHub, tecnologías, guía de estilos con paleta hexadecimal, explicación de las 5 funciones dinámicas de JavaScript con capturas, y la sección de uso reflexivo de Inteligencia Artificial (especificando modelos utilizados, asistencia en maquetación semántica y las adaptaciones manuales realizadas por el equipo).</p>
+
+                    <p class="mt-2"><strong class="text-blue">Cierre:</strong> La separación de estas tareas nos permitió tener el entorno de producción funcionando de manera estable antes de redactar la documentación final, asegurando una entrega limpia y organizada.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer Compartido -->
