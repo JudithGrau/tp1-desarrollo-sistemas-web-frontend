@@ -111,8 +111,6 @@ Expande y alterna datos biográficos y de certificaciones complementarias de for
 
 ## Capturas de pantalla
 
-## Capturas de pantalla
-
 ![Portada](./img/screenshots/Screenshot_Portada.png)
 ![Perfil](./img/screenshots/Screenshot_example_Perfil.png)
 ![Bitácora](./img/screenshots/Screenshot_Bitacora.png)
