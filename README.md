@@ -71,16 +71,21 @@ tp1-desarrollo-sistemas-web-frontend/
 ├── js/
 │   └── script.js           # Logica interactiva global y de perfiles individuales
 │
-├── img/                    # Activos graficos y fotografias del equipo
+├── img/                    # Activos gráficos y fotografías del equipo
 │   ├── judith.png
 │   ├── matias.png
 │   ├── lucas.png
 │   ├── mauro.png
+│   ├── favicon.svg
+│   ├── screenshots/        # Capturas de pantalla usadas en este README
+│   │   ├── Screenshot_Portada.png
+│   │   ├── Screenshot_example_Perfil.png
+│   │   └── Screenshot_Bitacora.png
 │   └── other/
-│       ├── perfil-mati/    # Imagenes de discos y peliculas de Matias
-│       └── perfil-lucas/   # Imagenes de discos y peliculas de Lucas
+│       ├── perfil-mati/    # Imágenes de discos y películas de Matías
+│       └── perfil-lucas/   # Imágenes de discos y películas de Lucas
 │
-└── README.md               # Documentacion tecnica del proyecto
+└── README.md               # Documentación técnica del proyecto
 ```
 
 ---
@@ -106,9 +111,11 @@ Expande y alterna datos biográficos y de certificaciones complementarias de for
 
 ## Capturas de pantalla
 
-![Portada](./screenshots/screenshot_Portada.png)
-![Perfil](./screenshots/screenshot_Example_Perfil.png)
-![Bitácora](./screenshots/screenshot_Bitacora.png)
+## Capturas de pantalla
+
+![Portada](./img/screenshots/Screenshot_Portada.png)
+![Perfil](./img/screenshots/Screenshot_example_Perfil.png)
+![Bitácora](./img/screenshots/Screenshot_Bitacora.png)
 
 ---
 
