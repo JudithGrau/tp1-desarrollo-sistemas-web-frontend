@@ -79,10 +79,10 @@ tp1-desarrollo-sistemas-web-frontend/
 │   ├── favicon.svg
 │   ├── screenshots/        # Capturas de pantalla usadas en este README
 │   │   ├── Bitacora.png
-│   │   ├── Perfil Judith.png
-│   │   ├── Perfil Lucas.png
-│   │   ├── Perfil Mati.png
-│   │   ├── Perfil Mauro.png
+│   │   ├── PerfilJudith.png
+│   │   ├── PerfilLucas.png
+│   │   ├── PerfilMati.png
+│   │   ├── PerfilMauro.png
 │   │   └── Portada.png
 │         
 │   └── other/
