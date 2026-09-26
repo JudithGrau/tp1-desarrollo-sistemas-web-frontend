@@ -78,9 +78,13 @@ tp1-desarrollo-sistemas-web-frontend/
 │   ├── mauro.png
 │   ├── favicon.svg
 │   ├── screenshots/        # Capturas de pantalla usadas en este README
-│   │   ├── Screenshot_Portada.png
-│   │   ├── Screenshot_example_Perfil.png
-│   │   └── Screenshot_Bitacora.png
+│   │   ├── Bitacora.png
+│   │   ├── Perfil Judith.png
+│   │   ├── Perfil Lucas.png
+│   │   ├── Perfil Mati.png
+│   │   ├── Perfil Mauro.png
+│   │   └── Portada.png
+│         
 │   └── other/
 │       ├── perfil-mati/    # Imágenes de discos y películas de Matías
 │       └── perfil-lucas/   # Imágenes de discos y películas de Lucas
@@ -93,10 +97,10 @@ tp1-desarrollo-sistemas-web-frontend/
 ## Funciones Dinámicas en JavaScript
 
 ### 1. Portada (`index.html`) — Selector Aleatorio de Integrantes
-Permite seleccionar al azar un integrante del equipo al presionar el botón de dinámica grupal, renderizando una tarjeta destacada con avatar, rol y enlace directo al perfil.
+Permite seleccionar al azar un integrante del equipo al presionar el botón de dinámica grupal, renderizando en pantalla una tarjeta destacada con avatar, rol, descripción y enlace directo al perfil correspondiente sin recargar la página.
 
 ### 2. Perfil de Judith (`judith.html`) — Generador de Recomendaciones
-Genera de manera aleatoria consejos técnicos y combinaciones de películas o discos para sesiones de programación.
+Genera de manera aleatoria consejos técnicos y combinaciones de películas o discos para sesiones de programación mediante un array dinámico en JavaScript.
 
 ### 3. Perfil de Matías (`matias.html`) — Carruseles de Scroll Horizontal
 Permite el desplazamiento interactivo horizontal bidireccional mediante botones prev/next sobre las colecciones de cine y música, complementado con tarjetas con efecto hover y zoom.
@@ -105,15 +109,18 @@ Permite el desplazamiento interactivo horizontal bidireccional mediante botones 
 Desplazamiento horizontal interactivo bidireccional mediante botones prev/next sobre su colección de 6 películas y 5 discos musicales, complementado con tarjetas con efecto hover, zoom animado y ficha descriptiva en overlay.
 
 ### 5. Perfil de Mauro (`mauro.html`) — Revelador de Información Adicional
-Expande y alterna datos biográficos y de certificaciones complementarias de forma dinámica.
+Expande y alterna datos biográficos y de certificaciones complementarias de forma dinámica al hacer clic en el botón interactivo.
 
 ---
 
 ## Capturas de pantalla
 
-![Portada](./img/screenshots/Screenshot_Portada.png)
-![Perfil](./img/screenshots/Screenshot_example_Perfil.png)
-![Bitácora](./img/screenshots/Screenshot_Bitacora.png)
+![Captura de la portada principal con hero y tarjeta de integrantes](./img/screenshots/Portada.png)
+![Captura del diseño de perfil individual y su interacción dinámica](./img/screenshots/PerfilJudith.png)
+![Captura del diseño de perfil individual y su interacción dinámica](./img/screenshots/PerfilMatias.png)
+![Captura del diseño de perfil individual y su interacción dinámica](./img/screenshots/PerfilLucas.png)
+![Captura del diseño de perfil individual y su interacción dinámica](./img/screenshots/PerfilMauro.png)
+![Captura de la sección Bitácora con el registro del proceso grupal Bitácora](./img/screenshots/Bitacora.png)
 
 ---
 
@@ -160,10 +167,11 @@ Este TP1 sentó la base técnica del equipo: estructura de repositorio compartid
 
 En cumplimiento con la sección didáctica y transversal del trabajo práctico:
 
-- **Herramientas y Modelos Utilizados**: Se empleó Antigravity con modelos de lenguaje avanzados como asistente técnico de programación en pares (Pair Programming). Además, Claude (Anthropic) se usó como asistente para la sección de Mauro (perfil individual, bitácora y armado de este README).
+- **Herramientas y Modelos Utilizados**: Se emplearon asistentes de código (Antigravity) y Claude (Anthropic) para soporte en la sección de Mauro (perfil, bitácora y base del README).
 - **Plan utilizado**: Plan gratuito en todos los casos.
+- **Experiencia Previa del Equipo**: Nivel intermedio en desarrollo web y uso de IA generativa orientada a consultas sintácticas, arquitectura de maquetación y aceleración de flujos de trabajo.
 - **Alcance de la Asistencia**: Asistencia en la modularización de estilos CSS, estructuración semántica de `lucas.html`, arquitectura de media queries adaptativas y documentación técnica. En el caso de Mauro, en la redacción de `mauro.html`, `bitacora.html` y este `README.md`.
 - **Criterio de Privacidad y Seguridad**: No se incorporaron credenciales reales ni claves privadas en el repositorio. Se mantuvieron las directivas de seguridad locales y el seguimiento incremental en `docs/estado_actual.md` protegido en `.gitignore`.
-- **Criterio Propio y Adaptación**: Cada bloque de código generado fue revisado, adaptado a la arquitectura de diseño preexistente definida por el equipo (`double-bezel`, paleta de tokens `:root`, convenciones de nombres) y validado manualmente para asegurar total armonía visual y estructural.
+- **Criterio Propio y Adaptación**: Cada bloque de código sugerido fue revisado, adaptado a la arquitectura de diseño preexistente definida por el equipo (`double-bezel`, paleta de tokens `:root`, convenciones de nombres) y validado manualmente para asegurar total armonía visual y estructural.
 
 ---
