@@ -1,38 +1,38 @@
 # TP1 — Desarrollo de Sistemas Web Frontend
 
-Sitio web grupal desarrollado para la materia de Desarrollo de Sistemas Web Frontend (Tecnicatura Superior en Desarrollo de Software). El proyecto integra una arquitectura en HTML5 semantico, diseno visual modular con CSS vanilla y dinamismo interactivo con JavaScript puro.
+Sitio web grupal desarrollado para la materia de Desarrollo de Sistemas Web Frontend (Tecnicatura Superior en Desarrollo de Software). El proyecto integra una arquitectura en HTML5 semántico, diseño visual modular con CSS vanilla y dinamismo interactivo con JavaScript puro.
 
 ---
 
 ## Integrantes del Equipo
 
-- **Judith Grau** — Coordinacion & Portada
+- **Judith Grau** — Coordinación & Portada
   - GitHub: [github.com/JudithGrau](https://github.com/JudithGrau)
-  - Pagina: `judith.html`
-- **Matias Jara** — Sistema Visual & Perfil
+  - Página: `judith.html`
+- **Matías Jara** — Sistema Visual & Perfil
   - GitHub: [github.com/matijara11](https://github.com/matijara11)
-  - Pagina: `matias.html`
+  - Página: `matias.html`
 - **Lucas Luccaroni** — Responsive Design & Testing
   - GitHub: [github.com/lucasluccaroni](https://github.com/lucasluccaroni)
   - Portafolio: [lucasluccaroni-portfolio.vercel.app](https://lucasluccaroni-portfolio.vercel.app/)
-  - Pagina: `lucas.html`
-- **Mauro Flores** — Bitacora & Documentacion
+  - Página: `lucas.html`
+- **Mauro Flores** — Bitácora & Documentación
   - GitHub: [github.com/floresmauroezequiel1992-beep](https://github.com/floresmauroezequiel1992-beep)
-  - Pagina: `mauro.html`
+  - Página: `mauro.html`
 
 ---
 
-## Tecnologias Utilizadas
+## Tecnologías Utilizadas
 
-- **HTML5**: Maquetacion semantica accesible (`header`, `nav`, `main`, `section`, `article`, `footer`).
-- **CSS3 Vanilla**: Sistema de tokens de diseno mediante variables personalizadas (`:root`), composicion con Flexbox y CSS Grid, estetica double-bezel y glassmorphism.
-- **JavaScript Vanilla (ES6+)**: Manipulacion del DOM, scroll programmatico y generacion dinamica de contenidos.
-- **Google Fonts**: Familias tipograficas *Sora* (titulos) e *Inter* (cuerpo de texto).
-- **FontAwesome 6.7.2**: Iconografia vectorial para perfiles y metadatos.
+- **HTML5**: Maquetación semántica accesible (`header`, `nav`, `main`, `section`, `article`, `footer`).
+- **CSS3 Vanilla**: Sistema de tokens de diseño mediante variables personalizadas (`:root`), composición con Flexbox y CSS Grid, estética double-bezel y glassmorphism.
+- **JavaScript Vanilla (ES6+)**: Manipulación del DOM, scroll programático y generación dinámica de contenidos.
+- **Google Fonts**: Familias tipográficas *Sora* (títulos) e *Inter* (cuerpo de texto).
+- **FontAwesome 6.7.2**: Iconografía vectorial para perfiles y metadatos.
 
 ---
 
-## Guia de Estilos
+## Guía de Estilos
 
 ### Paleta de Colores (Tokens Hexadecimales)
 - Fondo Principal (`--color-bg`): `#071A1F`
@@ -44,9 +44,13 @@ Sitio web grupal desarrollado para la materia de Desarrollo de Sistemas Web Fron
 - Texto Secundario (`--color-text-secondary`): `#A7B8BA`
 - Bordes Sutiles (`--color-border`): `rgba(56, 189, 248, 0.15)`
 
-### Tipografia
-- Titulos y Encabezados: `Sora`, sans-serif (pesos 600, 700, 800).
-- Texto General y Parrafos: `Inter`, sans-serif (pesos 300, 400, 500, 600).
+### Tipografía
+- Títulos y Encabezados: `Sora`, sans-serif (pesos 600, 700, 800).
+- Texto General y Párrafos: `Inter`, sans-serif (pesos 300, 400, 500, 600).
+
+### Iconografía
+- **FontAwesome 6.7.2** (vía CDN), usado en íconos de perfiles (ubicación, cumpleaños, redes), etiquetas temáticas (`eyebrow`) y elementos de navegación.
+- Emojis puntuales (✦, ↗, ↑) como refuerzo visual en botones e interacciones dinámicas.
 
 ---
 
@@ -81,80 +85,80 @@ tp1-desarrollo-sistemas-web-frontend/
 
 ---
 
-## Funciones Dinamicas en JavaScript
+## Funciones Dinámicas en JavaScript
 
 ### 1. Portada (`index.html`) — Selector Aleatorio de Integrantes
-Permite seleccionar al azar un integrante del equipo al presionar el boton de dinamica grupal, renderizando una tarjeta destacada con avatar, rol y enlace directo al perfil.
+Permite seleccionar al azar un integrante del equipo al presionar el botón de dinámica grupal, renderizando una tarjeta destacada con avatar, rol y enlace directo al perfil.
 
 ### 2. Perfil de Judith (`judith.html`) — Generador de Recomendaciones
-Genera de manera aleatoria consejos tecnicos y combinaciones de peliculas o discos para sesiones de programacion.
+Genera de manera aleatoria consejos técnicos y combinaciones de películas o discos para sesiones de programación.
 
-### 3. Perfil de Matias (`matias.html`) — Carruseles de Scroll Horizontal
-Permite el desplazamiento interactivo horizontal bidireccional mediante botones prev/next sobre las colecciones de cine y musica, complementado con tarjetas con efecto hover y zoom.
+### 3. Perfil de Matías (`matias.html`) — Carruseles de Scroll Horizontal
+Permite el desplazamiento interactivo horizontal bidireccional mediante botones prev/next sobre las colecciones de cine y música, complementado con tarjetas con efecto hover y zoom.
 
-### 4. Perfil de Lucas (`lucas.html`) — Carruseles Multimedia de Cine y Musica
-Desplazamiento horizontal interactivo bidireccional mediante botones prev/next sobre su coleccion de 6 peliculas y 5 discos musicales, complementado con tarjetas con efecto hover, zoom animado y ficha descriptiva en overlay.
+### 4. Perfil de Lucas (`lucas.html`) — Carruseles Multimedia de Cine y Música
+Desplazamiento horizontal interactivo bidireccional mediante botones prev/next sobre su colección de 6 películas y 5 discos musicales, complementado con tarjetas con efecto hover, zoom animado y ficha descriptiva en overlay.
 
-### 5. Perfil de Mauro (`mauro.html`) — Revelador de Informacion Adicional
-Expande y alterna datos biograficos y de certificaciones complementarias de forma dinamica.
+### 5. Perfil de Mauro (`mauro.html`) — Revelador de Información Adicional
+Expande y alterna datos biográficos y de certificaciones complementarias de forma dinámica.
 
 ---
 
 ## Capturas de pantalla
 
-![Portada](./screenshot/screenshot_Portada.png)
-![Perfil](./screenshot/screenshot_Example_Perfil.png)
-![Bitacora](./screenshot/screenshot_Bitacora.png)
+![Portada](./screenshots/screenshot_Portada.png)
+![Perfil](./screenshots/screenshot_Example_Perfil.png)
+![Bitácora](./screenshots/screenshot_Bitacora.png)
 
 ---
 
-## Diseno Adaptativo (Responsive Design)
+## Diseño Adaptativo (Responsive Design)
 
 El proyecto cuenta con una arquitectura adaptable en `css/style.css` que responde a los tres breakpoints obligatorios de la consigna:
 
 1. **Desktop / Base (1200px)**:
-   - Limite de contenedor centrado en 1200px con margenes laterales de proteccion.
+   - Límite de contenedor centrado en 1200px con márgenes laterales de protección.
    - Grilla del equipo (`.team-grid`) distribuida en 4 columnas equilibradas.
-   - Posicionamiento seguro de botones de navegacion en carruseles sin desborde de ventana.
+   - Posicionamiento seguro de botones de navegación en carruseles sin desborde de ventana.
 
 2. **Tablet / Pantallas Medianas (900px)**:
-   - Reorganizacion de la grilla de integrantes a 2 columnas.
-   - Barra de navegacion en flujo vertical alineado.
-   - Adaptacion de componentes hero y tarjetas `double-bezel` para visualizacion legible en orientacion vertical.
+   - Reorganización de la grilla de integrantes a 2 columnas.
+   - Barra de navegación en flujo vertical alineado.
+   - Adaptación de componentes hero y tarjetas `double-bezel` para visualización legible en orientación vertical.
 
 3. **Mobile (400px)**:
    - Grilla de tarjetas colapsada a 1 columna (ancho del 100%).
-   - Barra de navegacion compacta con wrap de enlaces para prevenir desbordes horizontales (`overflow-x: hidden`).
-   - Escala tipografica fluida mediante funciones `clamp()`.
-   - Dimensionamiento tactil accesible en botones y enlaces interactivos (minimo 44px de altura segun recomendaciones WCAG).
+   - Barra de navegación compacta con wrap de enlaces para prevenir desbordes horizontales (`overflow-x: hidden`).
+   - Escala tipográfica fluida mediante funciones `clamp()`.
+   - Dimensionamiento táctil accesible en botones y enlaces interactivos (mínimo 44px de altura según recomendaciones WCAG).
 
 ---
 
 ## Demo
 
-🔗 Sitio publicado: [tp1-desarrollo-sistemas-web-fronten.vercel.app](https://tp1-desarrollo-sistemas-web-fronten.vercel.app/) 
+🔗 Sitio publicado: [tp1-desarrollo-sistemas-web-fronten.vercel.app](https://tp1-desarrollo-sistemas-web-fronten.vercel.app/)
 
 ---
 
-## Evolucion del Proyecto
+## Evolución del Proyecto
 
-Este TP1 sento la base tecnica del equipo: estructura de repositorio compartido, sistema de diseno propio (double-bezel, tokens de color, tipografia Sora/Inter) y una dinamica de trabajo colaborativo con commits individuales. De cara a los proximos trabajos practicos, el equipo planea:
+Este TP1 sentó la base técnica del equipo: estructura de repositorio compartido, sistema de diseño propio (double-bezel, tokens de color, tipografía Sora/Inter) y una dinámica de trabajo colaborativo con commits individuales. De cara a los próximos trabajos prácticos, el equipo planea:
 
-- Profundizar la modularizacion del CSS (separar variables, componentes y utilidades en archivos distintos).
-- Sumar mas interacciones dinamicas y, eventualmente, consumo de datos desde una API externa.
+- Profundizar la modularización del CSS (separar variables, componentes y utilidades en archivos distintos).
+- Sumar más interacciones dinámicas y, eventualmente, consumo de datos desde una API externa.
 - Mejorar la cobertura de testing manual en distintos navegadores y dispositivos reales.
-- Revisar accesibilidad (contraste, navegacion por teclado, atributos ARIA) en mayor profundidad.
+- Revisar accesibilidad (contraste, navegación por teclado, atributos ARIA) en mayor profundidad.
 
 ---
 
 ## Uso de Inteligencia Artificial y Criterio de Privacidad
 
-En cumplimiento con la seccion didactica y transversal del trabajo practico:
+En cumplimiento con la sección didáctica y transversal del trabajo práctico:
 
-- **Herramientas y Modelos Utilizados**: Se empleo Antigravity con modelos de lenguaje avanzados como asistente tecnico de programacion en pares (Pair Programming).
+- **Herramientas y Modelos Utilizados**: Se empleó Antigravity con modelos de lenguaje avanzados como asistente técnico de programación en pares (Pair Programming). Además, Claude (Anthropic) se usó como asistente para la sección de Mauro (perfil individual, bitácora y armado de este README).
 - **Plan utilizado**: Plan gratuito en todos los casos.
-- **Alcance de la Asistencia**: Asistencia en la modularizacion de estilos CSS, estructuracion semantica de `lucas.html`, arquitectura de media queries adaptativas y documentacion tecnica. En el caso de Mauro, en la redaccion de mauro.html, bitacora.html y este README.md.
+- **Alcance de la Asistencia**: Asistencia en la modularización de estilos CSS, estructuración semántica de `lucas.html`, arquitectura de media queries adaptativas y documentación técnica. En el caso de Mauro, en la redacción de `mauro.html`, `bitacora.html` y este `README.md`.
 - **Criterio de Privacidad y Seguridad**: No se incorporaron credenciales reales ni claves privadas en el repositorio. Se mantuvieron las directivas de seguridad locales y el seguimiento incremental en `docs/estado_actual.md` protegido en `.gitignore`.
-- **Criterio Propio y Adaptacion**: Cada bloque de codigo generado fue revisado, adaptado a la arquitectura de diseno preexistente definida por el equipo (`double-bezel`, paleta de tokens `:root`, convenciones de nombres) y validado manualmente para asegurar total armonia visual y estructural.
+- **Criterio Propio y Adaptación**: Cada bloque de código generado fue revisado, adaptado a la arquitectura de diseño preexistente definida por el equipo (`double-bezel`, paleta de tokens `:root`, convenciones de nombres) y validado manualmente para asegurar total armonía visual y estructural.
 
 ---
